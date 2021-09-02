@@ -71,7 +71,7 @@ The interactive device can be anything *except* a computer, a tablet computer or
 \*\***Setting: This interaction will happen in an enviroment where a person is studying or working. 
 Player: A person who is studying or working.
 Activity: To increase the efficiency of ones' work, one decide to adapt [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) by using a tomato timer (our device) on the desk.
-Goals: The goal of the tomato timer is to tell the user when is the time to take a break and when is the time to go back to work.**\*\*
+Goals: The goal of the tomato timer is to tell the user when is the time to take a break (continuous green light) and when is the time to go back to work (flash red light and then go back to black).**\*\*
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
