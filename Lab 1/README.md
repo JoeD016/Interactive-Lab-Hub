@@ -79,16 +79,16 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 
-\*\***Summarize feedback you got here.**\*\*
+\*\***My group members are mostly concerned about that sometime the person is focusing on the work so deep that he or she might not notice the green light signal from the device.**\*\*
 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-\*\***Are there things that seemed better on paper than acted out?**\*\*
+\*\***Just like the feedback I got from others, the light signal itself is sometimes not strong enough to notify the user to take a break.**\*\*
 
-\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+\*\***If we assume the user is not using headphones or earbuds while working, we can also make our device give a sound notification like a few dog barking, that will do the work nicely.**\*\*
 
 
 ## Part C. Prototype the device
@@ -101,7 +101,7 @@ We invented this tool for this lab!
 
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
-\*\***Give us feedback on Tinkerbelle.**\*\*
+\*\***Tinkerbelle does not work on my mac with python 3.8 installed, the process works just fine and no warnings or errors pops out but it just does not work, however when swich to my windows pc everything works out just fine.**\*\*
 
 
 ## Part D. Wizard the device
