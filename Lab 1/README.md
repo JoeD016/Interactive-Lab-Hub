@@ -101,7 +101,7 @@ We invented this tool for this lab!
 
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
-\*\***Tinkerbelle does not work on my mac with python 3.8 installed, the process works just fine and no warnings or errors pops out but it just does not work, however when swich to my windows pc everything works out just fine.**\*\*
+\*\***Tinkerbelle does not work on my mac with python 3.8 installed, the process shows no warnings or errors ßbut it just does not work, however when swich to my windows pc everything works out just fine.**\*\*
 
 
 ## Part D. Wizard the device
