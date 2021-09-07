@@ -108,11 +108,11 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
+\*\***Instead of playing it out remotely, I met up with my friend Flora to set everyting out. after telling her the functionality of my device, we quickly cleaned up a place for her to study and having my tomato timer at side. Then we start to make recordings using my phone. **\*\*
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
-\*\***Show the follow-up work here.**\*\*
+\*\***The tinkerbelle tool does not have the flashing light on its own so we decide to swipe up and down on the remote control panel to simulate flashing light and it works pretty well. During the recording, I am the one who shoot the video and control the light, Flora is acting as the main charactor. I make the device to flash green light so that Flora know she need to take a break from her work, then after 5 minutes break, I flashes red light and Flora know its time to go back to work.**\*\*
 
 
 ## Part E. Costume the device
@@ -123,7 +123,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your device might look like here.**\*\*
 
-\*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+\*\***This device will be using in any working environment such as library, study lounge and etc, in these situation the user may need to take it around and put it in a backpack or even a lady purse. Thus, the device need to be as small as possible. The device also need to take feedback from the user which maybe best solved by having a single button on top of the device. Having a single big button on the top, the user can easily mapping their experience from other timers they've used before and know what to expect when they puash the button: to stop the timer (in this case is to tell the device that they notice that they need a break or get back to work).**\*\*
 
 
 ## Part F. Record
