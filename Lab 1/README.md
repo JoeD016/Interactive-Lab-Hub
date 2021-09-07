@@ -121,7 +121,7 @@ Only now should you start worrying about what the device should look like. Devel
 
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
-\*\***Include sketches of what your device might look like here.**\*\*
+![](tomato_timer.jpeg)
 
 \*\***This device will be using in any working environment such as library, study lounge and etc, in these situation the user may need to take it around and put it in a backpack or even a lady purse. Thus, the device need to be as small as possible. The device also need to take feedback from the user which maybe best solved by having a single button on top of the device. Having a single big button on the top, the user can easily mapping their experience from other timers they've used before and know what to expect when they puash the button: to stop the timer (in this case is to tell the device that they notice that they need a break or get back to work).**\*\*
 
