@@ -144,7 +144,7 @@ This describes the second week's work for this lab activity.
 
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
-\*\***I set my video demo to private on youtube so my peers are not able to access, but still there are one constructive suggestions that the red color of the device could make the red light not easily noticeable so maybe the device can swich to other color itself to notify the user, also the timer can be programmagble to accomodate various works.**\*\*
+\*\***I set my video demo to private on youtube so my peers are not able to access, but still there are constructive suggestions that the red color of the device could make the red light less noticeable, so maybe I will let the device swich colors by itself to notify the user, also the timer could be programmagble to accomodate various works.**\*\*
 
 ## Make it your own
 
