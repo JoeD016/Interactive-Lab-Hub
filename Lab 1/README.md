@@ -153,4 +153,11 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative!
 3) We will be grading with an emphasis on creativity. 
 
-\*\***This device is still going to be used in the bedroom, public study room or library. Anyone who wants to adopt Pomodoro Technique to their work or study can be our targert user. For the functionality update, This time we allows it to connect to a portable device whether its an Iphone or Ipad or laptop wirelessly so that the user can program the timer to suit their working type. (working interval length, break interval length, silence mode) This time we also planned to allow the timer to make sound notifications like dog barkings, people who have a dog at home can easily mapping the barking to its time to go for a walk. Along with the sound notification added, we also give the user choice to mute the timer by simply pushing down the button on the top of the device because users sometime  **\*\*
+\*\***This device is still going to be used in a bedroom, public study room or library. Anyone who wants to adopt Pomodoro Technique to their work or study can be our targert user. For the functionality update, This time we allows it to connect to a portable device whether its an Iphone or Ipad or laptop wirelessly so that user can program the timer to suit their working type (working interval length, break interval length, silence mode). This time we also allow the timer to switch between different color of signals to notify the user, if this still doesn't work, make sound notifications like dog barks (5 minuts after ligh signal), people who have a dog at home can easily map the barking sound to go for a walk. For usage in a public setting, we allow the user to simply mute the timer so that it does not disturb others. Moreover, if the portable device that connect with the timer is also connected with a bluetooth headphone, the app will play sound notification through the bluetooth headphone not through timer itself. 
+
+For the cosmetic part, the timer has been changed to a little rubber duck with a slightly opened mouth where the light source is hiding inside. Closing the mouth is mapped to stop the timer. While mouth is closed, the timer is now a simple rubber duck and ready to help users to perform the [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging).**\*\*
+
+
+
+
+
