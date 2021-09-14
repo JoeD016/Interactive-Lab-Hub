@@ -157,7 +157,7 @@ Do last week’s assignment again, but this time:
 
 For the cosmetic part, the timer has been changed to a little rubber duck with a slightly opened mouth where the light source is hiding inside. Closing the mouth is mapped to stop the timer. While mouth is closed, the timer is now a simple rubber duck and ready to help users to perform the [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) technique.**\*\*
 
-
+The recorded video demo can be found [here](https://www.youtube.com/watch?v=U6HY4lQ0ZNg). 
 
 
 
