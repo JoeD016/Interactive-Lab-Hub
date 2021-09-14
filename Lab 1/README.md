@@ -144,7 +144,7 @@ This describes the second week's work for this lab activity.
 
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
-\*\***I set my video demo to private on youtube so my peers are not able to access, but still there are constructive suggestions that the red color of the device could make the red light less noticeable, so maybe I will let the device swich colors by itself to notify the user, also the timer could be programmagble to accomodate various works.**\*\*
+\*\***I set my video demo to private on youtube so my peers are not able to access, but still there are constructive suggestions that the red color of the device could make the red light less noticeable, so maybe I will let the device swich colors by itself to notify the user, also the timer could be programmagable to accomodate various works.**\*\*
 
 ## Make it your own
 
@@ -153,4 +153,4 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative!
 3) We will be grading with an emphasis on creativity. 
 
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+\*\***This device is still going to be used in the bedroom, public study room or library. Anyone who wants to adopt Pomodoro Technique to their work or study can be our targert user. For the functionality update, This time we allows it to connect to a portable device whether its an Iphone or Ipad or laptop wirelessly so that the user can program the timer to suit their working type. (working interval length, break interval length, silence mode) This time we also planned to allow the timer to make sound notifications like dog barkings, people who have a dog at home can easily mapping the barking to its time to go for a walk. Along with the sound notification added, we also give the user choice to mute the timer by simply pushing down the button on the top of the device because users sometime  **\*\*
