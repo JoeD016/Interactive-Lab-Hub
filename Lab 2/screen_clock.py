@@ -66,7 +66,7 @@ while True:
     cmd = strftime("%m/%d/%Y %H:%M:%S")
     Time = "Time: " + subprocess.check_output(cmd, shell=True).decode("utf-8")
     y = top
-    draw.text((x,y), Time, font=font)
+    draw.text((x,y), Time, font=font, fill="#FFFFFF")
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
 
     # Display image.
