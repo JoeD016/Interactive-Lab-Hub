@@ -197,7 +197,7 @@ The video recording demo can be find [Here](https://thonny.org/)
 ![](design_1.jpg)
 ![](design_2.jpg)
 ![](design_3.jpg)
-![](design_4.jpg, height = "200")
+![](design_4.jpg)
 
 # Prep for Part 2
 
