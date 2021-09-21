@@ -6,7 +6,7 @@ For our first Pi project, we will pay homage to the [timekeeping devices of old]
 
 It is worth spending a little time thinking about how you mark time, and what would be useful in a clock of your own design.
 
-**I am working with Ken He as a group, we all set up our Pis and I am doing the coding part of the assignments and he is doign the storyboards and descriptions of our Pi clock.**
+**I am working with Liqin(Ken) He (lh553) as a group, we all set up our Pis and I am doing the coding part of the assignments and he is doign the storyboards and descriptions of our Pi clock.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 ## Prep
