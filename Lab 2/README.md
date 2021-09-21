@@ -194,10 +194,10 @@ The video recording demo can be find [Here](https://thonny.org/)
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-1[](design_1.jpg)
-1[](design_2.jpg)
-1[](design_3.jpg)
-1[](design_4.jpg, height = "200")
+![](design_1.jpg)
+![](design_2.jpg)
+![](design_3.jpg)
+![](design_4.jpg, height = "200")
 
 # Prep for Part 2
 
