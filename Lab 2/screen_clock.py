@@ -1,8 +1,9 @@
-import time
+import time,datetime
 import subprocess
 import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
+from time import strftime, sleep 
 import adafruit_rgb_display.st7789 as st7789
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
@@ -53,8 +54,11 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
+font1 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 25)
+
+font2 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 6)
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
@@ -63,12 +67,34 @@ backlight.value = True
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    cmd = strftime("%m/%d/%Y %H:%M:%S")
-    Time = "Time: " + subprocess.check_output(cmd, shell=True).decode("utf-8")
-    y = top
-    draw.text((x,y), Time, font=font, fill="#FFFFFF")
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    strDate = strftime('%A %m %b %Y')
+    strTime = strftime('%H: %M: %S')
+    strhour = strftime('%H')
+    Hour = int(strhour)
+    strmin = strftime('%M')
+    Min = int(strmin)
 
+    strsec = strftime('%S')
+    Sec = int(strsec)
+
+
+
+    number_of_coffee = Min/10
+
+
+    draw.text((x,top),strDate, font = font, fill ="#ffffff")
+    draw.text((x+24,top+32),strhour+"  O'Clock", font = font1, fill ="#FFFF00")
+    draw.text((x+50,top+58),"and  "+str(int(number_of_coffee))+"  coffee",font=font1,fill = "#FFFF00")
+    draw.text((x+78,top+86),strTime, font = font, fill = "#FFFF00")
+    draw.text((x+5,top+78),"   *   *    *",font = font2, fill = "#ffffff")
+    draw.text((x+5,top+84),"  *   *    *", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+90),"   *   *    *", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+96),"  *   *    *", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+102),"***************", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+108),"  ***********   * ", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+114),"   *********    *", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+120),"    ******* **** ", font = font2, fill = "#ffffff")
+    draw.text((x+5,top+126),"     *****   ", font = font2, fill = "#ffffff")
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
