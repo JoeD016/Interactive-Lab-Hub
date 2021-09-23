@@ -204,6 +204,10 @@ The video recording demo can be find [Here](https://www.youtube.com/watch?v=CBeL
 1. Pick up remaining parts for kit.
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+The feedback we got from people of our partG:
+For the first idea, the clock is too simplistic that user only know the current hour, it needs at least minutes to be truely useful in many situation.
+For idea2, Still user may want to knwo the exact minutes of the time.
+Idea 3 
 
 # Lab 2 Part 2
 
