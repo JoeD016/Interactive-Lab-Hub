@@ -10,6 +10,7 @@ import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
 from time import strftime, sleep 
+from pytz import timezone
 
 
 # The display uses a communication protocol called SPI.
@@ -102,20 +103,24 @@ backlight.switch_to_output()
 backlight.value = True
 
 
+est = timezone('EST')
+est_now = datetime.now(est)
+bij = timezone('Asia/Beijing')
+bij_now = datetime.now(bij)
 
 
 # Main loop:
 while True:
     if not buttonA.value: # New York Time display
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        strDate = strftime('%A %m %b %Y')
-        strTime = strftime('%H: %M: %S')
-        strhour = strftime('%H')
+        strDate = est_now.strftime('%A %m %b %Y')
+        strTime = est_now.strftime('%H: %M: %S')
+        strhour = est_now.strftime('%H')
         Hour = int(strhour)
-        strmin = strftime('%M')
+        strmin = est_now.strftime('%M')
         Min = int(strmin)
 
-        strsec = strftime('%S')
+        strsec = est_now.strftime('%S')
         Sec = int(strsec)
 
 
@@ -145,20 +150,20 @@ while True:
     
     if not buttonB.value:  # just button B pressed    Beijing Time
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        strDate = strftime('%A %m %b %Y')
-        strMinSec = strftime('%M: %S')
-        strhour = strftime('%H')
+        strDate = bij_now.strftime('%A %m %b %Y')
+        strMinSec = bij_now.strftime('%M: %S')
+        strhour = bij_now.strftime('%H')
         Hour = int(strhour)
-        if Hour > 12:
-            Hour -= 12
-        else:
-            Hour += 12
-        strmin = strftime('%M')
+        # if Hour > 12:
+        #     Hour -= 12
+        # else:
+        #     Hour += 12
+        strmin = bij_now.strftime('%M')
         Min = int(strmin)
 
-        strsec = strftime('%S')
+        strsec = bij_now.strftime('%S')
         Sec = int(strsec)
-        strTime = str(Hour) + ":" + strMinSec
+        strTime = str(Hour) + ": " + strMinSec
 
 
 
