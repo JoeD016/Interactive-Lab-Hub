@@ -106,7 +106,7 @@ backlight.switch_to_output()
 backlight.value = True
 
 
-est = timezone('EST')
+est = timezone('US/Eastern')
 est_now = datetime.now(est)
 bij = timezone('Asia/Beijing')
 bij_now = datetime.now(bij)
