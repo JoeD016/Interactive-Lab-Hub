@@ -108,7 +108,7 @@ backlight.value = True
 #pytz.timezone('Asia/Beijing')
 est = pytz.timezone('US/Eastern')
 est_now = datetime.now(est)
-bij = pytz.timezone('Asia/Beijing')
+bij = pytz.timezone('Asia/Shanghai')
 bij_now = datetime.now(bij)
 
 
