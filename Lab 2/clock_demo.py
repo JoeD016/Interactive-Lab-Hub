@@ -143,8 +143,8 @@ while True:
         
         
     
-    #if not buttonA.value:  # just button B pressed    Beijing Time
-     #   draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    if buttonA.value:  # just button B pressed    Beijing Time
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
     #     strDate = strftime('%A %m %b %Y')
     #     strTime = strftime('%H: %M: %S')
     #     strhour = strftime('%H')
