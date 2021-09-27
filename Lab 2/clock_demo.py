@@ -146,7 +146,7 @@ while True:
     if not buttonB.value:  # just button B pressed    Beijing Time
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         strDate = strftime('%A %m %b %Y')
-        strTime = strftime('%H: %M: %S')
+        strMinSec = strftime('%M: %S')
         strhour = strftime('%H')
         Hour = int(strhour)
         if Hour > 12:
@@ -158,6 +158,7 @@ while True:
 
         strsec = strftime('%S')
         Sec = int(strsec)
+        strTime = str(Hour) + ":" + strMinSec
 
 
 
