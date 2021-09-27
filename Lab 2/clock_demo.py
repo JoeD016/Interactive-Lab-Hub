@@ -106,16 +106,16 @@ backlight.switch_to_output()
 backlight.value = True
 
 #pytz.timezone('Asia/Beijing')
-est = pytz.timezone('US/Eastern')
-est_now = datetime.now(est)
-bij = pytz.timezone('Asia/Shanghai')
-bij_now = datetime.now(bij)
+
+
 
 
 # Main loop:
 while True:
     if not buttonA.value: # New York Time display
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        est = pytz.timezone('US/Eastern')
+        est_now = datetime.now(est)
         strDate = est_now.strftime('%A %m %b %Y')
         strTime = est_now.strftime('%H: %M: %S')
         strhour = est_now.strftime('%H')
@@ -152,6 +152,8 @@ while True:
         
     
     if not buttonB.value:  # just button B pressed    Beijing Time
+        bij = pytz.timezone('Asia/Shanghai')
+        bij_now = datetime.now(bij)
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         strDate = bij_now.strftime('%A %m %b %Y')
         strMinSec = bij_now.strftime('%M: %S')
