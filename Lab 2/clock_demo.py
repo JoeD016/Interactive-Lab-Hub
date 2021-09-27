@@ -7,13 +7,13 @@ import adafruit_rgb_display.st7789 as st7789
 import webcolors
 
 import time,datetime
-from datetime import datetime
+from datetime import datetime, timezone
 
 import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
 from time import strftime, sleep 
-from pytz import timezone
+
 
 
 # The display uses a communication protocol called SPI.
