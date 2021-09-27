@@ -8,7 +8,7 @@ import webcolors
 
 import time,datetime
 from datetime import datetime, timezone
-
+import pytz
 import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
@@ -105,10 +105,10 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-
-est = timezone('US/Eastern')
+#pytz.timezone('Asia/Beijing')
+est = pytz.timezone('US/Eastern')
 est_now = datetime.now(est)
-bij = timezone('Asia/Beijing')
+bij = pytz.timezone('Asia/Beijing')
 bij_now = datetime.now(bij)
 
 
