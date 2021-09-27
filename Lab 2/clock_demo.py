@@ -1,12 +1,13 @@
 import digitalio
 import board
-import pytz 
+
 
 from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
 import webcolors
 
 import time,datetime
+from datetime import pytz 
 import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
