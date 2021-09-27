@@ -121,6 +121,23 @@ while True:
 
 
         number_of_coffee = Min/10
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)  
+        draw.text((x,top),strDate, font = font, fill ="#ffffff")
+        draw.text((x+24,top+32),strhour+"  O'Clock", font = font1, fill ="#FFFF00")
+        draw.text((x+50,top+58),"and  "+str(int(number_of_coffee))+"  coffee",font=font1,fill = "#FFFF00")
+        draw.text((x+78,top+86),strTime, font = font, fill = "#FFFF00")
+        draw.text((x+5,top+78),"   *   *    *",font = font2, fill = "#ffffff")
+        draw.text((x+5,top+84),"  *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+90),"   *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+96),"  *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+102),"***************", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+108),"  ***********   * ", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+114),"   *********    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+120),"    ******* **** ", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+126),"     *****   ", font = font2, fill = "#ffffff")
+    # Display image.
+        disp.image(image, rotation)
+        time.sleep(1)
 
 
         
@@ -148,23 +165,23 @@ while True:
 
         
 
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)  
-    draw.text((x,top),strDate, font = font, fill ="#ffffff")
-    draw.text((x+24,top+32),strhour+"  O'Clock", font = font1, fill ="#FFFF00")
-    draw.text((x+50,top+58),"and  "+str(int(number_of_coffee))+"  coffee",font=font1,fill = "#FFFF00")
-    draw.text((x+78,top+86),strTime, font = font, fill = "#FFFF00")
-    draw.text((x+5,top+78),"   *   *    *",font = font2, fill = "#ffffff")
-    draw.text((x+5,top+84),"  *   *    *", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+90),"   *   *    *", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+96),"  *   *    *", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+102),"***************", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+108),"  ***********   * ", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+114),"   *********    *", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+120),"    ******* **** ", font = font2, fill = "#ffffff")
-    draw.text((x+5,top+126),"     *****   ", font = font2, fill = "#ffffff")
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)  
+        draw.text((x,top),strDate, font = font, fill ="#ffffff")
+        draw.text((x+24,top+32),strhour+"  O'Clock", font = font1, fill ="#FFFF00")
+        draw.text((x+50,top+58),"and  "+str(int(number_of_coffee))+"  coffee",font=font1,fill = "#FFFF00")
+        draw.text((x+78,top+86),strTime, font = font, fill = "#FFFF00")
+        draw.text((x+5,top+78),"   *   *    *",font = font2, fill = "#ffffff")
+        draw.text((x+5,top+84),"  *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+90),"   *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+96),"  *   *    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+102),"***************", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+108),"  ***********   * ", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+114),"   *********    *", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+120),"    ******* **** ", font = font2, fill = "#ffffff")
+        draw.text((x+5,top+126),"     *****   ", font = font2, fill = "#ffffff")
     # Display image.
-    disp.image(image, rotation)
-    time.sleep(1)
+        disp.image(image, rotation)
+        time.sleep(1)
 
 
 
