@@ -106,7 +106,7 @@ backlight.value = True
 
 # Main loop:
 while True:
-    if buttonA.value: # New York Time display
+    if not buttonA.value: # New York Time display
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         strDate = strftime('%A %m %b %Y')
         strTime = strftime('%H: %M: %S')
@@ -143,8 +143,8 @@ while True:
         
         
     
-    if not buttonA.value:  # just button B pressed    Beijing Time
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    #if not buttonA.value:  # just button B pressed    Beijing Time
+     #   draw.rectangle((0, 0, width, height), outline=0, fill=0)
     #     strDate = strftime('%A %m %b %Y')
     #     strTime = strftime('%H: %M: %S')
     #     strhour = strftime('%H')
