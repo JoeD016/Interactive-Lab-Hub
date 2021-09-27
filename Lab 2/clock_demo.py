@@ -167,7 +167,7 @@ while True:
 
         draw.rectangle((0, 0, width, height), outline=0, fill=0)  
         draw.text((x,top),strDate, font = font, fill ="#ffffff")
-        draw.text((x+24,top+32),Hour+"  O'Clock", font = font1, fill ="#FFFF00")
+        draw.text((x+24,top+32),str(Hour)+"  O'Clock", font = font1, fill ="#FFFF00")
         draw.text((x+50,top+58),"and  "+str(int(number_of_coffee))+"  coffee",font=font1,fill = "#FFFF00")
         draw.text((x+78,top+86),strTime, font = font, fill = "#FFFF00")
         draw.text((x+5,top+78),"   *   *    *",font = font2, fill = "#ffffff")
