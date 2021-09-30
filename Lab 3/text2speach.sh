@@ -1,3 +1,2 @@
-#from: https://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)#Festival_Text_to_Speech
-
-echo "Greeting, to Jiahao Dong" | festival --tts
+# from https://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)
+espeak -ven+f2 -k5 -s150 --stdout  "Greeting, to Dong Jiahao" | aplay
