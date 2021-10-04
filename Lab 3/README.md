@@ -106,7 +106,7 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
-\*\***Please describe and document your process.**\*\*
+\*\***I was working with Shenxin Jiang (jians10) after a brainstorming session we find out that sometims when people are on the phone or driving, they may have a hard time of remembering a list of numbe (could be someone's phone number or zipcode ect), so we would like to have our device to act as a digital memo to help record number information.**\*\*
 
 ### Acting out the dialogue
 
@@ -114,7 +114,7 @@ Find a partner, and *without sharing the script with your partner* try out the d
 
 ### The video demo of our dialogue can be find [here](https://www.youtube.com/watch?v=1PuzkOuhvbY)
 
-\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+\*\***The dialogue aced out as what I expect but there are some little problems first is during a phone call, the user will keep talking and the device may have a hard time determining whether to stop recording.**\*\*
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
