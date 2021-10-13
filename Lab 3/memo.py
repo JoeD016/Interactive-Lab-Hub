@@ -31,7 +31,7 @@ disp = st7789.ST7789(
 height = disp.width  
 width = disp.height
 image = Image.new("RGB", (width, height))
-#rotation = 90
+rotation = 0
 
 draw = ImageDraw.Draw(image)
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
