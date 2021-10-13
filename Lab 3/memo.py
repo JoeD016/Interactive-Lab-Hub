@@ -31,7 +31,7 @@ disp = st7789.ST7789(
 height = disp.width  
 width = disp.height
 image = Image.new("RGB", (width, height))
-rotation = 90
+#rotation = 90
 
 draw = ImageDraw.Draw(image)
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
@@ -83,23 +83,23 @@ while True:
 
     time.sleep(0.1)
 
-    
+    #transpose(PIL.Image.ROTATE_90)
     while 500 < joystick.get_horizontal() <= 600 and joystick.get_vertical() == 0:
-        ma_img = Image.open("icon/test1.png").transpose(PIL.Image.ROTATE_90)
+        ma_img = Image.open("icon/test1.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
         time.sleep(0.1)
    
     while joystick.get_horizontal() == 1023 and 500 <= joystick.get_vertical() < 600:
-        ma_img = Image.open("icon/test2.png").transpose(PIL.Image.ROTATE_90)
+        ma_img = Image.open("icon/test2.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
         time.sleep(0.1)
   
     while 500 <= joystick.get_horizontal() < 600 and 0 <= joystick.get_vertical() == 1023:
-        ma_img = Image.open("icon/test3.png").transpose(PIL.Image.ROTATE_90)
+        ma_img = Image.open("icon/test3.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
