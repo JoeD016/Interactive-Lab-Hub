@@ -85,14 +85,14 @@ while True:
 
     #transpose(PIL.Image.ROTATE_90)
     while 500 < joystick.get_horizontal() <= 600 and joystick.get_vertical() == 0:
-        ma_img = Image.open("pngs/test1.png").transpose(PIL.Image.ROTATE_90)
+        ma_img = Image.open("icon/test1.png").transpose(PIL.Image.ROTATE_90)
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
         time.sleep(0.1)
    
     while joystick.get_horizontal() == 1023 and 500 <= joystick.get_vertical() < 600:
-        ma_img = Image.open("pngs/test2.png").transpose(PIL.Image.ROTATE_90)
+        ma_img = Image.open("icon/test2.png").transpose(PIL.Image.ROTATE_90)
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
