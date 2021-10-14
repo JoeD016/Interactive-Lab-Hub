@@ -91,7 +91,7 @@ while True:
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
-        os.system('./memo.sh '+ 'Please tell me the number you want to record')
+        os.system('./askfornumber.sh')
         time.sleep(0)
    
     while joystick.get_horizontal() == 1023 and 500 <= joystick.get_vertical() < 600:
