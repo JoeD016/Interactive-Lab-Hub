@@ -114,7 +114,7 @@ while True:
     
         disp.image(ma_img, rotation)
         if not played2:
-            os.system('./memo.sh '+ 'seven three three eight eight eight nine nine nine nine')
+            os.system('./memo.sh ')
         played2 = True
         time.sleep(0)
         
