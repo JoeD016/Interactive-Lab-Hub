@@ -159,15 +159,15 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-We are using a joystick for the user to interacte with the device, by pushing it toward different directions, the system will respond differently and triger different mode. In this way, it is easy for the user to let the device know what they want. But the system is still not that easy to use becasue the user has to push the joystick and it can be hard to do during a phone call. It's also inaccurrate at times that the speech to text tool will sometimes record less and sometimes more then the user want. The timing when the device starts to record is critical for this type of phone number memo. In an ideal situation, the device will be wake up and record when it captures some key words like "Let me take this number down" so the user does not have to manually start the recording.
+We are using a joystick for the user to interacte with the device, by pushing it toward different directions, the system will respond differently and triger different mode. In this way, it is easy for the user to let the device know what they want. But the system is still not that easy to use becasue the user has to push the joystick and it can be hard to do during a phone call. It's also inaccurrate at times that the speech to text tool will sometimes record less and sometimes more then the user want. The timing when the device starts to record is critical for this type of phone number memo. In an ideal situation, the device will be wake up and record when it captures some key words like "Let me take this number down" so the user does not have to manually start the recording. Also, it might take some time to learn the mapping between each direction of the joystick and the functionality of it.
 
 ### What worked well about the controller and what didn't?
 
-We are not able to set up the server due to issues we don't know, we wrote code in python to serve as a script and managed to use our command line from a computer as a controller, when the device is going to speak, we simply type in the stored phone number and let the device speech.
+We are not able to set up the server due to issues we don't know, we wrote code in python to serve as a script and managed to use our command line from a computer as a controller, when the device is going to speak, we simply type in the stored phone number manualy and let the device speech. This way we are not able to actually store a string of the input phone number, so if the user want to hear the number multiple times, we are out of luck. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
+The speed of the device speeking is too fast, sometimes it's hard to capture the whole number, we can add function to let it speek slower or the user can ask the device to repeat. Moverover, the device should be able to identify when to start recording the number and when to stop, even without the intercation from the user. Also sometimes the user might need to store multiple numbers not only phone numbers, but zipcode, liscence number etc and our device shoule be able to identify those using NLP techniques. 
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
