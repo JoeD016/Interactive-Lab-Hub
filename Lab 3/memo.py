@@ -105,8 +105,9 @@ while True:
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
-        time.sleep(0)
         os.system('./memo.sh '+ 'seven three three eight eight eight nine nine nine nine')
+        time.sleep(0)
+        
 
  
 
