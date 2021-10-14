@@ -86,12 +86,18 @@ while True:
     time.sleep(0.1)
 
     #transpose(PIL.Image.ROTATE_90)
+    played = False
+    played2 = False
+
     while 500 < joystick.get_horizontal() <= 600 and joystick.get_vertical() == 0:
+
         ma_img = Image.open("pngs/test1.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
-        os.system('./askfornumber.sh')
+        if played == False:
+            os.system('./askfornumber.sh')
+        played = True
         time.sleep(0)
    
     while joystick.get_horizontal() == 1023 and 500 <= joystick.get_vertical() < 600:
@@ -100,13 +106,16 @@ while True:
     
         disp.image(ma_img, rotation)
         time.sleep(0)
-  
+    
+ 
     while 500 <= joystick.get_horizontal() < 600 and 0 <= joystick.get_vertical() == 1023:
         ma_img = Image.open("pngs/test2.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
-        os.system('./memo.sh '+ 'seven three three eight eight eight nine nine nine nine')
+        if not played2:
+            os.system('./memo.sh '+ 'seven three three eight eight eight nine nine nine nine')
+        played2 = True
         time.sleep(0)
         
 
