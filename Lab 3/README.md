@@ -140,6 +140,10 @@ The system should:
 
 *Document how the system works*
 
+The given text to voice tool is not that useful that sometimes it can be hard to understand what the device is saying, so we plan to utilize the screen and let it display responses from our device. The main interaction between the user and device is by the joystick. By pushing the joystick to the left, the device knows it has to record something and by pushing joystick to the right, the device knows it has to play something. 
+
+The system works like this: The user is busy on the phone while his/her friend on the other side of the phone gives a phone number that the user has to memorize. The user push the joystick on our device to the left, the device asks what phone number should it record. The user then repeat after the phone number he/she heard to the device and it has been stored. Later the day when the use want to access this phone number memo, he/she just pushes the joystick to the right, the device then tells the phone number stored.
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
@@ -148,11 +152,11 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+We are using a joystick for the user to interacte with the device, by pushing it toward different directions, the system will respond differently and triger different mode. In this way, it is easy for the user to let the device know what they want. But the system is still not that easy to use becasue the user has to push the joystick and it can be hard to do during a phone call. It's also inaccurrate at times that the speech to text tool will sometimes record less and sometimes more then the user want. The timing when the device starts to record is critical for this type of phone number memo. In an ideal situation, the device will be wake up and record when it captures some key words like "Let me take this number down" so the user does not have to manually start the recording.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+We are not able to set up the server due to issues we don't know, we wrote code in python to serve as a script and managed to use our command line from a computer as a controller, when the device is going to speak, we simply type in the stored phone number and let the device speech.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
