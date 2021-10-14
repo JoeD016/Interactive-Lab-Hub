@@ -150,8 +150,8 @@ The system works like this: The user is busy on the phone while his/her friend o
 
 #### Link to the controller demo is [here](https://www.youtube.com/watch?v=l8HIGQzAWhI)
 
-![idd_lab3_system](https://user-images.githubusercontent.com/61925885/137235082-c355dc8f-6a2c-4b6e-9e73-9b36faded4ed.jpg)
-ee
+![idd_lab3_system](https://user-images.githubusercontent.com/61925885/137235249-deb40fbe-b9fc-46cb-9300-133804fd66cd.png)
+
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
