@@ -167,10 +167,10 @@ We are not able to set up the server due to issues we don't know, we wrote code 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-The speed of the device speeking is too fast, sometimes it's hard to capture the whole number, we can add function to let it speek slower or the user can ask the device to repeat. Moverover, the device should be able to identify when to start recording the number and when to stop, even without the intercation from the user. Also sometimes the user might need to store multiple numbers not only phone numbers, but zipcode, liscence number etc and our device shoule be able to identify those using NLP techniques. 
+The speed of the device speaking is too fast, sometimes it's hard to capture the whole number, we can add function to let it speak slower or the user can ask the device to repeat. Moverover, the device should be able to identify when to start recording the number and when to stop, even without the intercation from the user. Also sometimes the user might need to store multiple numbers not only phone numbers, but zipcode, liscence number etc and our device shoule be able to identify those using NLP techniques. 
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+I can implement a HashMap to store simple command and respond inside the device, another HashMap to store all the numbers and its type that the user want to store. The other senser we need is an audio senser that can sense when the user is speaking numbers and turn on the mic. Also cameras can be used to identify is user is on the phone or have other difficulties to write down the number themselves. 
 
