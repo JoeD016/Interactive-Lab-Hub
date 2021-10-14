@@ -146,6 +146,8 @@ The system works like this: The user is busy on the phone while his/her friend o
 
 *Include videos or screencaptures of both the system and the controller.*
 
+#### Link to the video is [here](https://www.youtube.com/watch?v=z3lPWa0Yx_U)
+
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
