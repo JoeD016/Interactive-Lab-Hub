@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 import qwiic_joystick
 import sys
+import os
 
 
 
@@ -105,7 +106,7 @@ while True:
     
         disp.image(ma_img, rotation)
         time.sleep(0)
-   
+        os.system('./memo.sh '+ 'seven three three eight eight eight nine nine nine nine')
 
  
 
