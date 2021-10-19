@@ -174,10 +174,13 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 Usually, sensors need to positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+![drum_1](https://user-images.githubusercontent.com/61925885/137825951-b5db275f-7a15-455b-b758-673ee88c22a8.png)
+![drum_2](https://user-images.githubusercontent.com/61925885/137825953-3e647393-8f0f-4035-b980-9f0fe30de72e.png)
+![drum_3](https://user-images.githubusercontent.com/61925885/137825954-b9e771d6-161a-4643-8d56-f76452a69fe9.png)
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+### One big question arised when designing these application of sensors are whether the buttons and joysticks on the interface is actually usable. For example, to estimate the size of human hand, whether the postion of one senser will hold-up the use of another one. Also the size of the overall interface, how big the interface board should be so that the user will feel comfortable interact with it. (In the electrical drum design, the distance between each hitables maybe too close or too far away once we build up the physical prototype). So these are the problems we definitely have to consider after the physical build.
 
-**\*\*\*Pick one of these designs to prototype.\*\*\***
+### For this lab, we will pick the electrical drum to prototype
 
 
 ### Part D
