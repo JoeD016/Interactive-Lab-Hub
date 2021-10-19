@@ -174,9 +174,28 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 Usually, sensors need to positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+
+#### 1. Electrical Drum:
 ![drum_1](https://user-images.githubusercontent.com/61925885/137825951-b5db275f-7a15-455b-b758-673ee88c22a8.png)
 ![drum_2](https://user-images.githubusercontent.com/61925885/137825953-3e647393-8f0f-4035-b980-9f0fe30de72e.png)
 ![drum_3](https://user-images.githubusercontent.com/61925885/137825954-b9e771d6-161a-4643-8d56-f76452a69fe9.png)
+
+
+#### 2. Interactable Alarm:
+![alarm_1](https://user-images.githubusercontent.com/61925885/137826769-e752fa83-b4ac-4bee-b7a5-f75d200f2d6e.png)
+![alarm_2](https://user-images.githubusercontent.com/61925885/137826771-5a267d28-ef5a-4213-98b7-b91ab5bad623.png)
+![alarm_3](https://user-images.githubusercontent.com/61925885/137826773-13272bca-85dc-4173-9e6d-d043728e7d9e.png)
+
+
+#### 3. Height senser:
+![height](https://user-images.githubusercontent.com/61925885/137826793-bd8a2b12-80ae-49ba-b1e1-75b6367d721e.png)
+
+#### 4. Backlight adjustable make-up mirror:
+![mirror](https://user-images.githubusercontent.com/61925885/137826829-fc3b73ba-63c9-48fb-bc97-00dace4b9a35.jpg)
+
+##### 5. Play Station:
+![play](https://user-images.githubusercontent.com/61925885/137826859-a363f8b7-17ca-4a19-a8dc-4c8da72afd6a.jpg)
+
 
 ### One big question arised when designing these application of sensors are whether the buttons and joysticks on the interface is actually usable. For example, to estimate the size of human hand, whether the postion of one senser will hold-up the use of another one. Also the size of the overall interface, how big the interface board should be so that the user will feel comfortable interact with it. (In the electrical drum design, the distance between each hitables maybe too close or too far away once we build up the physical prototype). So these are the problems we definitely have to consider after the physical build.
 
@@ -221,13 +240,17 @@ Here is an example:
 
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
-**\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+#### The physical design of our choosen device is below:
+![physical design](https://user-images.githubusercontent.com/61925885/137826898-35d9ebe4-b2e7-4f98-8dbf-32da422bf7d7.JPG)
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
-**\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
+#### We notice several questions like whether we should put the rotary at the top of left side of the device, which way is implementable and which is not. The angle between the top panel (where all the drums and cymbals are placed) and the front panel so that the user can clearly see our screen while focuing on the drums. And again the distance between each sensor and button to make the device usable.
+
+#### We finally choose to set the display at the front of the device.
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+####  We intentionally placed the display on the front side not the top of the device because we think the display will disturb the musician while playing. When the user want to adjust the settings of our digital drum set, they will look down a bit and see the display. This design logic helps user to focus on playing the drum and not what has been displayed.
 
 Build a cardbord prototype of your design.
 
