@@ -141,51 +141,51 @@ while True:
 	draw.text((2,2),wrapped, font=font1, fill="#ffa500")
 	disp.image(image,rotation)	    
 
-	if mpr121[0].value:
-	    print("Pin 0 touched!")
-	    #os.system('mpg321 a-5.mp3 &')
-	    time.sleep(0.3)
-	if mpr121[1].value:
-	    print("Pin 1 touched!")
-	    #os.system('mpg321 a5.mp3 &')
-	    time.sleep(0.3)
-	if mpr121[2].value:
-	    print("Pin 2 touched!")
-	    #os.system('mpg321 b3.mp3 &')
-	    time.sleep(0.3)
-	if mpr121[3].value:
-	    print("Pin 3 touched!")
-	    #os.system('mpg321 b4.mp3 &')
-	    time.sleep(0.3)	        
-	if mpr121[4].value:
-	    #os.system('mpg321 b5.mp3 &')
-	    time.sleep(0.3)
-	    print("Pin 4 touched!")
-	if mpr121[5].value:
-	    print("Pin 0 touched!")
-	    #os.system('mpg321 c-4.mp3 &')
-	    time.sleep(0.3)
+	# if mpr121[0].value:
+	#     print("Pin 0 touched!")
+	#     #os.system('mpg321 a-5.mp3 &')
+	#     time.sleep(0.3)
+	# if mpr121[1].value:
+	#     print("Pin 1 touched!")
+	#     #os.system('mpg321 a5.mp3 &')
+	#     time.sleep(0.3)
+	# if mpr121[2].value:
+	#     print("Pin 2 touched!")
+	#     #os.system('mpg321 b3.mp3 &')
+	#     time.sleep(0.3)
+	# if mpr121[3].value:
+	#     print("Pin 3 touched!")
+	#     #os.system('mpg321 b4.mp3 &')
+	#     time.sleep(0.3)	        
+	# if mpr121[4].value:
+	#     #os.system('mpg321 b5.mp3 &')
+	#     time.sleep(0.3)
+	#     print("Pin 4 touched!")
+	# if mpr121[5].value:
+	#     print("Pin 0 touched!")
+	#     #os.system('mpg321 c-4.mp3 &')
+	#     time.sleep(0.3)
 	if mpr121[6].value:
 	    print("Pin 1 touched!")
 	    #os.system('mpg321 c-5.mp3 &')
 	    time.sleep(0.3)
-	if mpr121[7].value:
-	    print("Pin 2 touched!")
-	    #os.system('mpg321 c5.mp3 &')
-	    time.sleep(0.3)
-	if mpr121[8].value:
-	    print("Pin 3 touched!")
-	    #os.system('mpg321 c6.mp3 &')
-	    time.sleep(0.3)	        
-	if mpr121[9].value:
-	    #os.system('mpg321 d-5.mp3 &')
-	    time.sleep(0.3)
-	    print("Pin 4 touched!")
+	# if mpr121[7].value:
+	#     print("Pin 2 touched!")
+	#     #os.system('mpg321 c5.mp3 &')
+	#     time.sleep(0.3)
+	# if mpr121[8].value:
+	#     print("Pin 3 touched!")
+	#     #os.system('mpg321 c6.mp3 &')
+	#     time.sleep(0.3)	        
+	# if mpr121[9].value:
+	#     #os.system('mpg321 d-5.mp3 &')
+	#     time.sleep(0.3)
+	#     print("Pin 4 touched!")
 	if mpr121[10].value:
 	    print("Pin 3 touched!")
 	    #os.system('mpg321 e5.mp3 &')
 	    time.sleep(0.3)	        
-	if mpr121[11].value:
-	    #os.system('mpg321 f-4.mp3 &')
-	    time.sleep(0.3)
-	    print("Pin 4 touched!")
+	# if mpr121[11].value:
+	#     #os.system('mpg321 f-4.mp3 &')
+	#     time.sleep(0.3)
+	#     print("Pin 4 touched!")
