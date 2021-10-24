@@ -53,9 +53,9 @@ def text_wrap(text,font,writing,max_width,max_height):
                 break
     return '\n'.join([' '.join(line) for line in lines])
 
-def speak(command):
-    call(f"espeak -ven-us -s100 --stdout '{command}' | aplay", shell=True)
-    time.sleep(1)
+# def speak(command):
+#     call(f"espeak -ven-us -s100 --stdout '{command}' | aplay", shell=True)
+#     time.sleep(1)
 
 
 # Configuration for CS and DC pins (these are PiTFT defaults):
