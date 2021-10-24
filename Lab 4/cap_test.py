@@ -66,5 +66,5 @@ while True:
     for i in range(12):
         if mpr121[i].value:
             print(f"Twizzler {i} touched!")
-            os.system('mpg321 Billy_roar{i}.mp3 &')
+            os.system(f'mpg321 Billy_roar{i}.mp3 &')
     time.sleep(0.25)  # Small delay to keep from spamming output messages.
