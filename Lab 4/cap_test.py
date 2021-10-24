@@ -49,10 +49,10 @@ i2c = busio.I2C(board.SCL, board.SDA)
 mpr121 = adafruit_mpr121.MPR121(i2c)
 
 while True:
-    # position = -encoder.position
-    # if position != last_position:
-    #     last_position = position
-    #     print("Position: {}".format(position))
+    position = -encoder.position
+    if position != last_position:
+        last_position = position
+        print("Position: {}".format(position))
 
     # if not button.value and not button_held:
     #     button_held = True
