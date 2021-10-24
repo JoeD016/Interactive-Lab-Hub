@@ -3,6 +3,7 @@ import board
 import busio
 
 import adafruit_mpr121
+import os
 
 i2c = busio.I2C(board.SCL, board.SDA)
 
