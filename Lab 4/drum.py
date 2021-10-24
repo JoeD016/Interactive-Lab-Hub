@@ -19,7 +19,7 @@ import busio
 import textwrap
 import qwiic_joystick
 import qwiic_button
-from gtts import gTTS
+#rom gtts import gTTS
 import adafruit_mpr121
 import os
 
