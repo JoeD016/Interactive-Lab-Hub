@@ -107,7 +107,7 @@ while True:
         print("Position: {}".format(position))
 
     while position == 1:
-        ma_img = Image.open("drum_title.png")
+        ma_img = Image.open("drum_title.jpg")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
