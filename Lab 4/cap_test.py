@@ -24,6 +24,20 @@ import os
 # import busio
 # i2c = busio.I2C(board.SCL1, board.SDA1)
 # seesaw = seesaw.Seesaw(i2c, 0x36)
+
+seesaw = seesaw.Seesaw(board.I2C(), addr=0x36)
+
+seesaw_product = (seesaw.get_version() >> 16) & 0xFFFF
+print("Found product {}".format(seesaw_product))
+if seesaw_product != 4991:
+    print("Wrong firmware loaded?  Expected 4991")
+
+seesaw.pin_mode(24, seesaw.INPUT_PULLUP)
+
+
+encoder = rotaryio.IncrementalEncoder(seesaw)
+last_position = None
+
 # while True:
 
 #     # negate the position to make clockwise rotation positive
