@@ -111,6 +111,18 @@ while True:
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
         disp.image(ma_img, rotation)
+    
+    if position == 2:
+        ma_img = Image.open("chinese_drum.jpg")
+        ma_img = ma_img.resize((240, 135), Image.BICUBIC)
+    
+        disp.image(ma_img, rotation)
+    
+    if position == 3:
+        ma_img = Image.open("memes.jpg")
+        ma_img = ma_img.resize((240, 135), Image.BICUBIC)
+    
+        disp.image(ma_img, rotation)
 
     # if not button.value and not button_held:
     #     button_held = True
