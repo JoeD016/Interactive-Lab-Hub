@@ -63,7 +63,7 @@ while True:
     #     print("Button released")
 
 
-    for i in range(9):
+    for i in range(10):
         if mpr121[i].value:
             print(f"Twizzler {i} touched!")
             os.system(f'mpg321 drum{position}{i}.mp3 &')
