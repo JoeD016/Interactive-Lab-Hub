@@ -8,6 +8,18 @@ import os
 import board
 from adafruit_seesaw import seesaw, rotaryio, digitalio
 
+import time
+
+
+import digitalio
+import board
+
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_rgb_display.st7789 as st7789
+
+
+import os
+
 # For use with the STEMMA connector on QT Py RP2040
 # import busio
 # i2c = busio.I2C(board.SCL1, board.SDA1)
@@ -48,11 +60,52 @@ i2c = busio.I2C(board.SCL, board.SDA)
 
 mpr121 = adafruit_mpr121.MPR121(i2c)
 
+cs_pin = digitalio.DigitalInOut(board.CE0)
+dc_pin = digitalio.DigitalInOut(board.D25)
+reset_pin = None
+BAUDRATE = 64000000
+spi = board.SPI()
+disp = st7789.ST7789(
+    spi,
+    cs=cs_pin,
+    dc=dc_pin,
+    rst=reset_pin,
+    baudrate=BAUDRATE,
+    width=135,
+    height=240,
+    x_offset=53,
+    y_offset=40,
+)
+
+
+height = disp.width  
+width = disp.height
+image = Image.new("RGB", (width, height))
+rotation = 90
+
+draw = ImageDraw.Draw(image)
+draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+disp.image(image, rotation)
+
+padding = -2
+top = padding
+bottom = height - padding
+x = 0
+
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+
+
 while True:
     position = -encoder.position
     if position != last_position:
         last_position = position
         print("Position: {}".format(position))
+
+    if position == 1:
+        ma_img = Image.open("drum_title.png")
+        ma_img = ma_img.resize((240, 135), Image.BICUBIC)
+    
+        disp.image(ma_img, rotation)
 
     # if not button.value and not button_held:
     #     button_held = True
