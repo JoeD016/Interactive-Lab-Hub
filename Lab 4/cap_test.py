@@ -102,7 +102,7 @@ while True:
         last_position = position
         print("Position: {}".format(position))
 
-    if position == 1:
+    while position == 1:
         ma_img = Image.open("drum_title.png")
         ma_img = ma_img.resize((240, 135), Image.BICUBIC)
     
