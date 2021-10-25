@@ -94,6 +94,8 @@ x = 0
 
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 
+draw.rectangle((0, 0, width, height), outline=0, fill=0)
+
 
 while True:
     position = -encoder.position
