@@ -263,7 +263,7 @@ LAB PART 2
 
 ### Part 2
 
-### I am working with Angela Chen(ac2689), shenxin Jiang(sj544) and all of our work has been documented in Angela's repo [here](https://github.com/angelachen-19/Interactive-Lab-Hub/tree/Fall2021/Lab%204)
+### I am working with Angela Chen(ac2689), Shenxin Jiang(sj544) and all of our work has been documented in Angela's repo [here](https://github.com/angelachen-19/Interactive-Lab-Hub/tree/Fall2021/Lab%204)
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
 
