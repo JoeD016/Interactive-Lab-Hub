@@ -263,6 +263,8 @@ LAB PART 2
 
 ### Part 2
 
+### I am working with Angela Chen(ac2689), shenxin Jiang(sj544) and all of our work has been documented in Angela's repo [here](https://github.com/angelachen-19/Interactive-Lab-Hub/tree/Fall2021/Lab%204)
+
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
 
 ### Part E (Optional)
@@ -298,7 +300,12 @@ We encourage you to try using these controls, **while** paying particular attent
 ### Record
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
+
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
+
+#### The device should 
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
+
+## Our final video demo can be find [here](https://youtu.be/-j0zzejkRAQ)
 
