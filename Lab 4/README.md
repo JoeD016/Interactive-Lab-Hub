@@ -256,6 +256,8 @@ Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+#### We use hardpaper deliver boxes to build our prototype, first we build a small box and the top surface being the user interface, we use print papers to make drum cymbals and hats and we put them on the top of our box. We act out the interaction by letting one of our group member being the computer/speaker. (manually select which sound to play when the user hit a cymbal). We realize the box is not big enough for the user to really enjoy playing it.
+
 
 LAB PART 2
 
