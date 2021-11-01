@@ -100,14 +100,36 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
-### Contours detection: automatically generate possible paths from spot A to B cause most of the time, paths are visually differenct then its surroundings. 
 
-### Face recognition: It can enable device to go to sleep an reserve battery life when detecting no user present in front of the device and auto wake up when a user do present in front of it.
+### Contours detection
 
-### Optical flow: enable people to sign their name in the air. We do not need to add a touch screen anymore. 
+<img width="1440" alt="contour_detect" src="https://user-images.githubusercontent.com/61925885/139612983-143272b3-9f45-4477-afcf-58c8629f0ed9.png">
+<img width="716" alt="contour_detect2" src="https://user-images.githubusercontent.com/61925885/139612998-f1adee96-5641-4a90-99cc-eba7da2af7ec.png">
 
 
-### Object detection: Auto check out machine: Detect number of object, can used to count the number of dishes student take when they check out and generate price. 
+#### One design: automatically generate possible paths from spot A to B cause most of the time, paths are visually differenct then its surroundings. 
+
+### Face recognition
+
+<img width="1440" alt="face_detect" src="https://user-images.githubusercontent.com/61925885/139613219-ae4efea3-38a4-4719-a3f2-a4ad7fb98d2a.png">
+<img width="1440" alt="face_detect2" src="https://user-images.githubusercontent.com/61925885/139613228-2b6c9cc3-c77a-4206-a6dc-a3fb7d6cfeba.png">
+
+
+#### One design: It can enable device to go to sleep an reserve battery life when detecting no user present in front of the device and auto wake up when a user do present in front of it.
+
+
+### Optical flow
+<img width="1440" alt="flow_detect" src="https://user-images.githubusercontent.com/61925885/139613259-e9a23bcf-e63d-41bc-b61d-d041ed4a0d90.png">
+
+
+#### One design:enable people to sign their name in the air. We do not need to add a touch screen anymore. 
+
+
+### Object detection
+
+<img width="716" alt="object_detect" src="https://user-images.githubusercontent.com/61925885/139613280-a16e763b-7ab1-45f3-84ab-9b6ac10a2960.png">
+
+#### One design:Auto check out machine: Detect number of object, can used to count the number of dishes student take when they check out and generate price. 
 
 #### MediaPipe
 
