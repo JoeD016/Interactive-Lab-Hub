@@ -271,13 +271,19 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+##### When does it and what it is supposed to do?
+It supposed to be a game that test and score a player on his/her relation capability when a couple of players want to play against each other
+
 ##### When does it fail? 
-##### When it cannot distinguish the hand. 
-##### When the latency is so huge that we cannot let player manipulate it freely
+When it cannot distinguish the hand. 
+When the latency is so huge that we cannot let player manipulate it freely
+
 ##### When it fails, why does it fail? 
-##### Case one: when the light is too dark, when the target(hand) is to close to the camera or too far away from camera 
-##### For instance, the way we used to generate circle and detect collision between 
+Case one: when the light is too dark, when the target(hand) is to close to the camera or too far away from camera 
+For instance, the way we used to generate circle and detect collision between 
+
 ##### Based on the behavior you have seen, what other scenarios could cause problems? 
+It may cause problems when some object that looks like hands come into view or hands that are not supposed to be playing the game (hands of observer for example)
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
