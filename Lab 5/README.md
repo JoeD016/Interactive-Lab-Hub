@@ -167,8 +167,14 @@ Try the two main features of this script: 1) pinching for percentage control, an
 
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
 
-### 
+### Hand pose detection:
 
+<img width="1440" alt="hand_detect" src="https://user-images.githubusercontent.com/61925885/139614428-ff96093e-3013-49c2-b70b-102997247853.png">
+
+<img width="1440" alt="hand_detect2" src="https://user-images.githubusercontent.com/61925885/139614437-4de2596c-57f0-4151-b2b6-cd1de0fbdc04.png">
+
+#### One application:
+We can generate an idle action game that based on movement detection, and enable player to interact with game object directly. 
 
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
@@ -207,6 +213,13 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
+### Teacchable Machines
+<img width="1440" alt="tm" src="https://user-images.githubusercontent.com/61925885/139614543-0e7cc225-90ea-4cee-96a2-93f0a2b3636d.png">
+
+<img width="1440" alt="tm2" src="https://user-images.githubusercontent.com/61925885/139614549-2c271399-2d61-4a41-8d42-2a2e1fbf11e1.png">
+
+#### One application:
+It can be used as a check-in device for a company. It may be placed at the entrance, the device will train a model that can classify each employer based on their facial information and record their working hour.
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
