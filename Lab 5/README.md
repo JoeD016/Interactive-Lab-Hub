@@ -167,6 +167,10 @@ Try the two main features of this script: 1) pinching for percentage control, an
 
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
 
+### 
+
+
+
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
 
@@ -229,6 +233,20 @@ This can be as simple as the boat detector earlier.
 Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
+
+### Reaction Capability Training:
+Button: make selection (start game, select game difficulty)
+Joystick: switch between different selection (change difficulty between 【easy】【middle】【hard】)
+Rule:
+After player press the button, game start. And The “Time Counter” start to count down. 
+When game starting, the value of “Score Counter” is set back to zero.
+Hand detection is used to track the movement of our hand and generate an handlike cursor in the screen.
+Generate circle shape that will auto disappear after certain time in the screen
+When cursor intersecting with the circle shape, counter++
+Display the total score gained by our player and an Evaluation Letter (ranging from “D” to “SSS”)
+
+![demo](https://user-images.githubusercontent.com/61925885/139614081-a13f991d-5754-498d-88f6-1bcbc6022b0d.gif)
+
 
 ### Part C
 ### Test the interaction prototype
