@@ -100,6 +100,13 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+### Contours detection: 
+
+### Optical flow: enable people to sign their name in the air. We do not need to add a touch screen anymore. 
+
+
+### Object detection: Auto check out machine: Detect number of object, can used to count the number of dishes student take when they check out and generate price. 
+
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
