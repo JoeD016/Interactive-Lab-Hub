@@ -258,6 +258,14 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+##### When does it fail? 
+##### When it cannot distinguish the hand. 
+##### When the latency is so huge that we cannot let player manipulate it freely
+##### When it fails, why does it fail? 
+##### Case one: when the light is too dark, when the target(hand) is to close to the camera or too far away from camera 
+##### For instance, the way we used to generate circle and detect collision between 
+##### Based on the behavior you have seen, what other scenarios could cause problems? 
+
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
