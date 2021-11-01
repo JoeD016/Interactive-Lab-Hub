@@ -100,7 +100,9 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
-### Contours detection: 
+### Contours detection: automatically generate possible paths from spot A to B cause most of the time, paths are visually differenct then its surroundings. 
+
+### Face recognition: It can enable device to go to sleep an reserve battery life when detecting no user present in front of the device and auto wake up when a user do present in front of it.
 
 ### Optical flow: enable people to sign their name in the air. We do not need to add a touch screen anymore. 
 
