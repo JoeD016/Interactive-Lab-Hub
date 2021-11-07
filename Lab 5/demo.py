@@ -47,7 +47,7 @@ while True:
     random_x = random.randint(1,600)
     random_y = random.randint(1,450)
     
-    cv2.circle(img,(200,300), 50, (255,255,0), -1) 
+    # cv2.circle(img,(200,300), 50, (255,255,0), -1) 
 
     font = cv2.FONT_HERSHEY_SIMPLEX
   
