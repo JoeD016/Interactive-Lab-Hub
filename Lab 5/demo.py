@@ -73,7 +73,7 @@ while True:
             print(circle)
             if circle[2] == 1:
                 continue
-            cv2.circle(img, circle, 50, (255, 255, 0), cv2.FILLED)
+            cv2.circle(img, (circle[0],circle[1]), 50, (255, 255, 0), cv2.FILLED)
         print(len(circles))
 
         if now.time()>nextime.time():
