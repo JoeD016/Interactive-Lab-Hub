@@ -126,7 +126,7 @@ while True:
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         
-        if state= 0:
+        if state == 0:
             if contact(index_x,index_y,250,200,50,50):
                 state=1
                 endtime=datetime.datetime.now()+gamelength
