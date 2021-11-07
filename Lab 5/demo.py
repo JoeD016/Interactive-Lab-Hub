@@ -70,9 +70,7 @@ while True:
 
     if state == 0:
         cv2.putText(img,'start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
-        if contact(index_x,index_y,250,200,50,50):
-            state=1
-            endtime=datetime.datetime.now()+gamelength
+        
 
     if state == 2:
         cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
@@ -128,6 +126,11 @@ while True:
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         
+        if state= 0:
+            if contact(index_x,index_y,250,200,50,50):
+                state=1
+                endtime=datetime.datetime.now()+gamelength
+
         
         for circle in circles:
             x, y = circle[0],circle[1]
