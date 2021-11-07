@@ -28,6 +28,12 @@ maxVol = 100
 vol = 0
 volBar = 400
 volPer = 0
+
+random_x = random.randint(1,200)
+random_y = random.randint(1,200)
+cv2.cycle(img,(random_x,random_y), 50, (255,255,0), cv2.FILLED) 
+
+
 while True:
     success, img = cap.read()
     img = detector.findHands(img)
@@ -51,9 +57,7 @@ while True:
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
        
-        random_x = random.randint(1,200)
-        random_y = random.randint(1,200)
-        cv2.cycle(img,(50,50), 50, (255,255,0), cv2.FILLED) 
+        
 
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
