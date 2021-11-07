@@ -57,14 +57,15 @@ while True:
     random_x = random.randint(1,600)
     random_y = random.randint(1,450)
     
-    # cv2.circle(img,(200,300), 50, (255,255,0), -1) 
+    # cv2.circle(img,(200,300), 30, (255,255,0), -1) 
 
     font = cv2.FONT_HERSHEY_SIMPLEX
+
     if not start:
         cv2.putText(img,'Start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
     if start:
-        cv2.putText(img,'Score :  ' + str(score), (500,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Score :  ' + str(score), (500,50), font, 0.5, (255,0,0), 2, cv2.LINE_AA)
 
 
     if len(lmList) != 0:
