@@ -40,7 +40,7 @@ current_time = now.strftime("%H:%M:%S")
 
 start = False
 
-def contact(loc_1x,loc1y, loc_2x,loc_2y,radius1,radius2):
+def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     distanceX= abs(loc_1x-loc_2x)
     distanceY= abs(loc_1y-loc_2y)
     distanceR= radius1+radius2
