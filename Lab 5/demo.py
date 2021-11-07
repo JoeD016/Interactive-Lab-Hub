@@ -39,7 +39,7 @@ timestepdelete = datetime.timedelta(0,4)
 endtime= datetime.datetime.now()
 gamelength= datetime.timedelta(0,10)
 
-start = False
+state = 0
 
 def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     distanceX= abs(loc_1x-loc_2x)
@@ -68,15 +68,17 @@ while True:
 
     font = cv2.FONT_HERSHEY_SIMPLEX
 
-    if not start:
-        cv2.putText(img,'Start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
+    if state == 0:
+        cv2.putText(img,'start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
-    if start:
+    if state == 2:
+        cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 3, (255,255,255), 2, cv2.LINE_AA)
+
+    if state == 1:
         now = datetime.datetime.now()
         if now>endtime:
-            start=False
-            cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 3, (255,255,255), 2, cv2.LINE_AA)
-
+            state = 2
+            
 
         nowdelete= datetime.datetime.now()
         for circle in circles:
@@ -124,7 +126,7 @@ while True:
         cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         
         if contact(index_x,index_y,250,200,50,50):
-             start=True
+             state=1
              endtime=datetime.datetime.now()+gamelength
 
         for circle in circles:
