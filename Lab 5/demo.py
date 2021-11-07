@@ -51,9 +51,11 @@ while True:
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
        
-        random_x = random.randint(1,500)
-        random_y = random.randint(1,500)
+        random_x = random.randint(1,200)
+        random_y = random.randint(1,200)
         cv2.cycle(img,(random_x,random_y), 50, (255,255,0), cv2.FILLED) 
+
+
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, idnex_y), 50, (255, 0, 255), cv2.FILLED)
