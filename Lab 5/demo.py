@@ -33,8 +33,9 @@ volPer = 0
 
 
 nextime= datetime.datetime.now()
-
-
+nextdeletetime= datetime.datetime.now()
+timestep = datetime.timedelta(0,2)
+timestepdelete = datetime.timedelta(0,4)
 
 
 start = False
@@ -67,9 +68,10 @@ while True:
 
     if start:
         now = datetime.datetime.now()
+        nowdelete= datetime.detetime.now()
         for circle in circles:
             print(circle)
-            cv2.circle(img, circle, 50, (255, 0, 255), cv2.FILLED)
+            cv2.circle(img, circle, 50, (255, 255, 0), cv2.FILLED)
         print(len(circles))
 
         if now.time()>nextime.time():
@@ -77,10 +79,11 @@ while True:
             random_x = random.randint(1,600)
             random_y = random.randint(1,450)
             circles.append((random_x,random_y))
+            nextime= now+timestep 
+        if nowdelete.time()>nextdeletetime.time():
+            print("delete the target")
             circles.popleft()
-
-            timestep = datetime.timedelta(0,3)
-            nextime= now+timestep            
+            nextdeletetime=now+timestepdelete
 
         cv2.putText(img,'Score :  ' + str(score), (500,50), font, 0.5, (255,0,0), 2, cv2.LINE_AA)
 
