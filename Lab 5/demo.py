@@ -43,7 +43,7 @@ while True:
  
         # cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
+        cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (ringX, ringY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
