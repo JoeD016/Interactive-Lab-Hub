@@ -37,7 +37,7 @@ nextdeletetime= datetime.datetime.now()
 timestep = datetime.timedelta(0,2)
 timestepdelete = datetime.timedelta(0,4)
 endtime= datetime.datetime.now()
-gamelength= datetime.timedelta(0,10)
+gamelength= datetime.timedelta(0,30)
 
 state = 0
 
