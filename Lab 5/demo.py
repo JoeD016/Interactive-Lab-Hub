@@ -56,7 +56,7 @@ circles.append([300,300,0])
 
 
 
-while GameContinue:
+while True:
     
     success, img = cap.read()
     img = detector.findHands(img)
@@ -74,7 +74,9 @@ while GameContinue:
     if start:
         now = datetime.datetime.now()
         if now>endtime:
-            GameContinue=False
+            start=False
+            cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 3, (255,255,255), 2, cv2.LINE_AA)
+
 
         nowdelete= datetime.datetime.now()
         for circle in circles:
