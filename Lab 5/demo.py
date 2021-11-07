@@ -60,7 +60,7 @@ while True:
     
     success, img = cap.read()
     img = detector.findHands(img)
-    img= cv2.flip(img,1)
+    #img= cv2.flip(img,1)
     lmList = detector.findPosition(img, draw=False)
     # random_x = random.randint(1,600)
     # random_y = random.randint(1,450)
