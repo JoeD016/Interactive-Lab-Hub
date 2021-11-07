@@ -92,7 +92,7 @@ while True:
         # if contact(index_x,index_y,200,300,50,50):
         #     start=True
 
-        print('location is' + str(index_x) + ' ' + str(idnex_y))
+        print('location is' + str(index_x) + ' ' + str(index_y))
 
 
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
