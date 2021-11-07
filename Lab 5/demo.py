@@ -16,8 +16,8 @@ cap.set(4, hCam)
 pTime = 0
 
 
-cycle_icon = cv2.Image.read('pcis/cycle.png')
-hand_icon = cv2.Image.read('pics/hand.png')
+cycle_icon = cv2.imread('./pics/cycle.png')
+hand_icon = cv2.imread('./pics/hand.png')
 
 
 detector = htm.handDetector(detectionCon=0.7)
@@ -52,7 +52,7 @@ while True:
         idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) / 6
         cv2.circle(hand_icon, (index_x, idnex_y), 15, (255, 0, 255), cv2.FILLED)
 
-        
+
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
         length = len_calc(thumbX,thumbY,pointerX,pointerY)
         length1 = len_calc(pointerX,pointerY,middleX,middleY)
