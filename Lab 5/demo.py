@@ -30,7 +30,7 @@ vol = 0
 volBar = 400
 volPer = 0
 
-circles = []
+
 nextime= datetime.datetime.now()
 
 
@@ -47,14 +47,14 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     return False
          
 score = 0
-
+circles = collections.deque()
 while True:
     
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
-    random_x = random.randint(1,600)
-    random_y = random.randint(1,450)
+    # random_x = random.randint(1,600)
+    # random_y = random.randint(1,450)
     
     # cv2.circle(img,(200,300), 30, (255,255,0), -1) 
 
@@ -65,8 +65,16 @@ while True:
 
     if start:
         now = datetime.datetime.now()
+        for circle in circles:
+            cv2.circle(img, circle, 50, (255, 0, 255), cv2.FILLED)
+            
         if now.time()>nextime.time():
             print("generate next circle")
+            random_x = random.randint(1,600)
+            random_y = random.randint(1,450)
+            circles.append((random_x,random_y))
+            circles.popleft()
+
             timestep = datetime.timedelta(0,3)
             nextime= now+timestep            
 
