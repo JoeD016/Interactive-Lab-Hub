@@ -53,7 +53,7 @@ while True:
        
         random_x = random.randint(1,200)
         random_y = random.randint(1,200)
-        # cv2.cycle(img,(int(random_x),(random_y)), 50, (255,255,0), cv2.FILLED) 
+        cv2.cycle(img,(50,50), 50, (255,255,0), cv2.FILLED) 
 
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
