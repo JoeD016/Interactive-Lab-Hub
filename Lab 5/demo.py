@@ -36,6 +36,10 @@ while True:
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
+    #random_x = random.randint(1,200)
+    #random_y = random.randint(1,200)
+    cv2.cycle(img,(200,400), 50, (255,255,0), -1) 
+
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
