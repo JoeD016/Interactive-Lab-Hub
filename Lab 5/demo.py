@@ -63,6 +63,7 @@ while True:
     if not start:
         cv2.putText(img,'Start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
+
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
@@ -76,7 +77,7 @@ while True:
 
         # cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
-        cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
+        # cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (ringX, ringY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
@@ -89,7 +90,7 @@ while True:
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         
-        if contact(index_x,index_y,200,300,50,50):
+        if contact(index_x,index_y,250,200,50,50):
              start=True
 
         print('location is' + str(index_x) + ' ' + str(index_y))
