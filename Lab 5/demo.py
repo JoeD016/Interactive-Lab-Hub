@@ -117,8 +117,8 @@ while True:
         if contact(index_x,index_y,250,200,50,50):
              start=True
 
-        for x,y in circles:
-            if contact(index_x,index_y,x,y,50,50):
+        for circle in circles:
+            if contact(index_x,index_y,circle[0],circle[1],50,50):
                 score += 1
                 circles.remove((x,y))
 
