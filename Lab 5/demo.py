@@ -16,8 +16,8 @@ cap.set(4, hCam)
 pTime = 0
 
 
-cycle_icon = cv2.imread('./pics/cycle.jpg')
-hand_icon = cv2.imread('./pics/hand.jpg')
+cycle_icon = cv2.imread('cycle.jpg')
+hand_icon = cv2.imread('hand.jpg')
 
 
 detector = htm.handDetector(detectionCon=0.7)
