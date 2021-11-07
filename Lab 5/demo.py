@@ -60,8 +60,8 @@ while True:
     # cv2.circle(img,(200,300), 50, (255,255,0), -1) 
 
     font = cv2.FONT_HERSHEY_SIMPLEX
-    if not start:
-        cv2.putText(img,'Start Game', (200,300), font, 1, (255,255,255), 2, cv2.LINE_AA)
+    # if not start:
+    #     cv2.putText(img,'Start Game', (200,300), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
     if len(lmList) != 0:
  
