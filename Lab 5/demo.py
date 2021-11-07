@@ -61,7 +61,7 @@ while True:
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, idnex_y), 50, (255, 0, 255), cv2.FILLED)
-        print('location is' + index_x + idnex_y)
+        print('location is' + str(index_x) + ' ' + str(idnex_y))
 
 
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
