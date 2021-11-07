@@ -38,6 +38,16 @@ now = datetime.now()
 
 current_time = now.strftime("%H:%M:%S")
 
+start = False
+
+def contact(loc_1x,loc1y, loc_2x,loc_2y,radius1,radius2):
+    distanceX= abs(loc_1x-loc_2x)
+    distanceY= abs(loc_1y-loc_2y)
+    distanceR= radius1+radius2
+    if((distanceX*distanceX+distanceY*distanceY)<distanceR*distanceR):
+        return True
+    return False
+         
 
 
 while True:
@@ -50,8 +60,8 @@ while True:
     # cv2.circle(img,(200,300), 50, (255,255,0), -1) 
 
     font = cv2.FONT_HERSHEY_SIMPLEX
-  
-    cv2.putText(img,'Start Game', (200,300), font, 1, (255,255,255), 2, cv2.LINE_AA)
+    if not start:
+        cv2.putText(img,'Start Game', (200,300), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
     if len(lmList) != 0:
  
@@ -63,7 +73,7 @@ while True:
         pinkyX, pinkyY = lmList[20][1], lmList[20][2]
         
         cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
- 
+
         # cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
@@ -76,8 +86,12 @@ while True:
 
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
-        idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
+        index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, idnex_y), 50, (255, 0, 255), cv2.FILLED)
+        
+        if contact(index_x,index_y,200,300,50,50):
+            start=True
+
         print('location is' + str(index_x) + ' ' + str(idnex_y))
 
 
