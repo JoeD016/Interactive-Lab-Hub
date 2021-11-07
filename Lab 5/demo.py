@@ -37,7 +37,7 @@ nextdeletetime= datetime.datetime.now()
 timestep = datetime.timedelta(0,2)
 timestepdelete = datetime.timedelta(0,4)
 endtime= datetime.datetime.now()
-gamelength= datetime.timedelta(0,50)
+gamelength= datetime.timedelta(0,10)
 
 start = False
 
@@ -75,7 +75,7 @@ while GameContinue:
         now = datetime.datetime.now()
         if now>endtime:
             GameContinue=False
-            
+
         nowdelete= datetime.datetime.now()
         for circle in circles:
             print(circle)
