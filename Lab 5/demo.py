@@ -117,6 +117,12 @@ while True:
         if contact(index_x,index_y,250,200,50,50):
              start=True
 
+        for x,y in circles:
+            if contact(index_x,index_y,x,y,50,50)
+            score += 1
+            circles.remove((x,y))
+
+
         print('location is' + str(index_x) + ' ' + str(index_y))
 
 
