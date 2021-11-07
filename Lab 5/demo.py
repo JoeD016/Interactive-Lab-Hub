@@ -36,9 +36,9 @@ while True:
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
-    #random_x = random.randint(1,200)
-    #random_y = random.randint(1,200)
-    cv2.circle(img,(200,400), 50, (255,255,0), -1) 
+    random_x = random.randint(1,600)
+    random_y = random.randint(1,450)
+    cv2.circle(img,(random_x,random_y), 50, (255,255,0), -1) 
 
     if len(lmList) != 0:
  
