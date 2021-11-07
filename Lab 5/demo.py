@@ -34,9 +34,7 @@ circles = []
 
 
 
-now = datetime.now()
 
-current_time = now.strftime("%H:%M:%S")
 
 start = False
 
