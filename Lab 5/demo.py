@@ -19,7 +19,7 @@ cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
 
-
+GameContinue= True
 cycle_icon = cv2.imread('cycle.jpg')
 hand_icon = cv2.imread('hand.jpg')
 
@@ -36,7 +36,8 @@ nextime= datetime.datetime.now()
 nextdeletetime= datetime.datetime.now()
 timestep = datetime.timedelta(0,2)
 timestepdelete = datetime.timedelta(0,4)
-
+endtime= datetime.datetime.now()
+gamelength= datetime.timedelta(0,50)
 
 start = False
 
@@ -47,11 +48,15 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     if((distanceX*distanceX+distanceY*distanceY)<distanceR*distanceR):
         return True
     return False
+
          
 score = 0
 circles = deque()
 circles.append([300,300,0])
-while True:
+
+
+
+while GameContinue:
     
     success, img = cap.read()
     img = detector.findHands(img)
@@ -68,6 +73,9 @@ while True:
 
     if start:
         now = datetime.datetime.now()
+        if now>endtime:
+            GameContinue=False
+            
         nowdelete= datetime.datetime.now()
         for circle in circles:
             print(circle)
@@ -108,8 +116,6 @@ while True:
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
        
-        
-
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
@@ -117,6 +123,7 @@ while True:
         
         if contact(index_x,index_y,250,200,50,50):
              start=True
+             endtime=datetime.datetime.now()+gamelength
 
         for circle in circles:
             x, y = circle[0],circle[1]
