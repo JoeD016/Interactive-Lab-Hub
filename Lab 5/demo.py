@@ -123,7 +123,7 @@ while True:
             x, y = circle[0],circle[1]
             if contact(index_x,index_y,x,y,50,50):
                 score += 1
-                circle[2] = 1
+                circle = (circle[0],circle[1],1)
 
 
         print('location is' + str(index_x) + ' ' + str(index_y))
