@@ -31,7 +31,7 @@ volBar = 400
 volPer = 0
 
 circles = []
-
+nextime= datetime.datetime.now()
 
 
 
@@ -49,6 +49,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
 score = 0
 
 while True:
+    
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
