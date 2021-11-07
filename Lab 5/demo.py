@@ -67,7 +67,9 @@ while True:
     if start:
         now = datetime.datetime.now()
         for circle in circles:
+            print(circle)
             cv2.circle(img, circle, 50, (255, 0, 255), cv2.FILLED)
+        print(len(circles))
 
         if now.time()>nextime.time():
             print("generate next circle")
