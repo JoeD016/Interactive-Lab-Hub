@@ -29,9 +29,7 @@ vol = 0
 volBar = 400
 volPer = 0
 
-random_x = random.randint(1,200)
-random_y = random.randint(1,200)
-cv2.cycle(img,(random_x,random_y), 50, (255,255,0), cv2.FILLED) 
+
 
 
 while True:
@@ -63,6 +61,7 @@ while True:
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         cv2.circle(img, (index_x, idnex_y), 50, (255, 0, 255), cv2.FILLED)
+        print('location is' + index_x + idnex_y)
 
 
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
