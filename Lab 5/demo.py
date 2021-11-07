@@ -87,7 +87,7 @@ while True:
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
-        cv2.circle(img, (index_x, idnex_y), 50, (255, 0, 255), cv2.FILLED)
+        cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         
         if contact(index_x,index_y,200,300,50,50):
             start=True
