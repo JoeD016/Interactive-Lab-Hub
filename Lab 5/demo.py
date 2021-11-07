@@ -50,7 +50,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
          
 score = 0
 circles = deque()
-circles.append((300,300))
+circles.append((300,300,0))
 while True:
     
     success, img = cap.read()
@@ -71,6 +71,8 @@ while True:
         nowdelete= datetime.datetime.now()
         for circle in circles:
             print(circle)
+            if circle[2] == 1:
+                continue
             cv2.circle(img, circle, 50, (255, 255, 0), cv2.FILLED)
         print(len(circles))
 
@@ -78,7 +80,7 @@ while True:
             print("generate next circle")
             random_x = random.randint(1,600)
             random_y = random.randint(1,450)
-            circles.append((random_x,random_y))
+            circles.append((random_x,random_y,0))
             nextime= now+timestep 
         if now.time()>nextdeletetime.time():
             print("delete the target")
@@ -121,7 +123,7 @@ while True:
             x, y = circle[0],circle[1]
             if contact(index_x,index_y,x,y,50,50):
                 score += 1
-                circles.remove((x,y))
+                circle[2] = 1
 
 
         print('location is' + str(index_x) + ' ' + str(index_y))
