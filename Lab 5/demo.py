@@ -38,7 +38,7 @@ while True:
     lmList = detector.findPosition(img, draw=False)
     #random_x = random.randint(1,200)
     #random_y = random.randint(1,200)
-    cv2.cycle(img,(200,400), 50, (255,255,0), -1) 
+    cv2.circle(img,(200,400), 50, (255,255,0), -1) 
 
     if len(lmList) != 0:
  
