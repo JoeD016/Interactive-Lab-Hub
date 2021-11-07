@@ -48,7 +48,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
         return True
     return False
          
-
+score = 0
 
 while True:
     success, img = cap.read()
@@ -62,6 +62,9 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
     if not start:
         cv2.putText(img,'Start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
+
+    if start:
+        cv2.putText(img,'Score' + str(score), (500,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
 
 
     if len(lmList) != 0:
