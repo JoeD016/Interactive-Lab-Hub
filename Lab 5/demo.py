@@ -68,7 +68,7 @@ while True:
 
     if start:
         now = datetime.datetime.now()
-        nowdelete= datetime.detetime.now()
+        nowdelete= datetime.datetime.now()
         for circle in circles:
             print(circle)
             cv2.circle(img, circle, 50, (255, 255, 0), cv2.FILLED)
