@@ -80,7 +80,7 @@ while True:
             random_y = random.randint(1,450)
             circles.append((random_x,random_y))
             nextime= now+timestep 
-        if nowdelete.time()>nextdeletetime.time():
+        if now.time()>nextdeletetime.time():
             print("delete the target")
             circles.popleft()
             nextdeletetime=now+timestepdelete
