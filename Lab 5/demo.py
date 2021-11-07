@@ -7,6 +7,7 @@ import math
 from ctypes import cast, POINTER
 import alsaaudio
 import random
+from collections import deque 
 
 m = alsaaudio.Mixer()
 ################################
@@ -47,7 +48,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     return False
          
 score = 0
-circles = collections.deque()
+circles = deque()
 while True:
     
     success, img = cap.read()
@@ -67,7 +68,7 @@ while True:
         now = datetime.datetime.now()
         for circle in circles:
             cv2.circle(img, circle, 50, (255, 0, 255), cv2.FILLED)
-            
+
         if now.time()>nextime.time():
             print("generate next circle")
             random_x = random.randint(1,600)
