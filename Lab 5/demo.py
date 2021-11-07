@@ -121,8 +121,8 @@ while True:
         print(int(length), vol)
 
  
-        if length < 50:
-            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+        # if length < 50:
+        #     cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
