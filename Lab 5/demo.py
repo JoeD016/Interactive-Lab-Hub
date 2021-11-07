@@ -49,6 +49,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
          
 score = 0
 circles = deque()
+circles.append((300,300))
 while True:
     
     success, img = cap.read()
