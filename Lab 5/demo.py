@@ -43,14 +43,14 @@ while True:
  
         # cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
-        cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
+        # cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (ringX, ringY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         idnex_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
-        cv2.circle(img, (index_x, idnex_y), 15, (255, 0, 255), cv2.FILLED)
+        cv2.circle(hand_icon, (index_x, idnex_y), 15, (255, 0, 255), cv2.FILLED)
 
 
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
