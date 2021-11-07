@@ -60,6 +60,7 @@ while True:
     
     success, img = cap.read()
     img = detector.findHands(img)
+    img= cv2.flip(img,1)
     lmList = detector.findPosition(img, draw=False)
     # random_x = random.randint(1,600)
     # random_y = random.randint(1,450)
@@ -182,6 +183,6 @@ while True:
     pTime = cTime
     cv2.putText(img, f'FPS: {int(fps)}', (40, 50), cv2.FONT_HERSHEY_COMPLEX,
                 1, (255, 0, 0), 3)
-    img= cv2.flip(img,1)
+    
     cv2.imshow("Img", img)
     cv2.waitKey(1)
