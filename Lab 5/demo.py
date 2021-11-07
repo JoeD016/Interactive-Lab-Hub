@@ -1,6 +1,6 @@
 import cv2
 import time
-from datetime import datetime
+import datetime
 import numpy as np
 import HandTrackingModule as htm
 import math
@@ -65,6 +65,12 @@ while True:
         cv2.putText(img,'Start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
     if start:
+        now = datetime.datetime.now()
+        if now.time()>nextime.time():
+            print("generate next circle")
+            timestep = datetime.timedelta(0,3)
+            nextime= now+timestep            
+
         cv2.putText(img,'Score :  ' + str(score), (500,50), font, 0.5, (255,0,0), 2, cv2.LINE_AA)
 
 
