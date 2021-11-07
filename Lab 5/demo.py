@@ -1,5 +1,6 @@
 import cv2
 import time
+from datetime import datetime
 import numpy as np
 import HandTrackingModule as htm
 import math
@@ -29,6 +30,13 @@ vol = 0
 volBar = 400
 volPer = 0
 
+circles = []
+
+
+
+now = datetime.now()
+
+current_time = now.strftime("%H:%M:%S")
 
 
 
@@ -38,7 +46,12 @@ while True:
     lmList = detector.findPosition(img, draw=False)
     random_x = random.randint(1,600)
     random_y = random.randint(1,450)
-    cv2.circle(img,(random_x,random_y), 50, (255,255,0), -1) 
+    
+    cv2.circle(img,(200,300), 50, (255,255,0), -1) 
+
+    font = cv2.FONT_HERSHEY_SIMPLEX
+  
+    cv2.putText(img,'Start Game', (200,300), font, 1, (255,0,255), 2, cv2.LINE_AA)
 
     if len(lmList) != 0:
  
