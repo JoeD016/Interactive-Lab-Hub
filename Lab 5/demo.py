@@ -70,13 +70,13 @@ while True:
 
     if state == 0:
         cv2.putText(img,'start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
-        contact(index_x,index_y,250,200,50,50):
-        state=1
-        endtime=datetime.datetime.now()+gamelength
+        if contact(index_x,index_y,250,200,50,50):
+            state=1
+            endtime=datetime.datetime.now()+gamelength
 
     if state == 2:
         cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
-        
+
     if state == 1:
         now = datetime.datetime.now()
         if now>endtime:
