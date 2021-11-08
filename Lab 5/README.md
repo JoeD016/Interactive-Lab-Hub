@@ -314,4 +314,6 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
+### The interaction demo video can be find [here](https://www.youtube.com/watch?v=yfbrUocLVBE)
+
 ### The game play demo video can be find [here](https://www.youtube.com/watch?v=rHen0c6MUSw)
