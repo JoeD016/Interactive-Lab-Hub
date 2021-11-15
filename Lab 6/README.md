@@ -169,6 +169,10 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
+### Answer:
+
+#### We can set up such script, using similar ideas shown in the read.py file that reach all messages from other user. 
+
 
 ### Part E
 ### Make it your own
