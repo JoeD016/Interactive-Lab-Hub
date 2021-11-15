@@ -133,7 +133,7 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 <img width="1023" alt="Screen Shot 2021-11-14 at 8 45 06 PM" src="https://user-images.githubusercontent.com/61925885/141709647-6bb6be3f-d6da-4da0-8151-3f6a0051cccf.png">
 
-#### We figured out the data streaming for the rotary encoder. Similar to the twizzlers senser, if the user rotate the encoder. In MQTT Explorer will display the postision of the torary encoder. We think this is a good idea to do remote control over home AC.
+#### We figured out the data streaming for the rotary encoder. Similar to the twizzlers senser, if the user rotate the encoder. In MQTT Explorer will display the postision of the torary encoder. We think this is a good idea to do remote control over home AC. This part of the code is in encoder_sender.py
 
 
 
@@ -171,7 +171,7 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 ### Answer:
 
-#### We can set up such script, using similar ideas shown in the read.py file that reach all messages from other user. 
+#### We can set up such script, using similar ideas shown in the read.py file that read and print all messages from other user. We simply implement the diaplay of RDG colors and take the message from the server and convert them to rgb value and then draw and display the color when ever a new message from IDD/colors is sent. This part of code is in color_reader.py
 
 
 ### Part E
