@@ -36,7 +36,7 @@ while True:
 
     if position != last_position:
         last_position = position
-        val = f"Position: {}".format(position)
+        val = f"Position: {position}"
         print(val)
         cliend.public(topic, val)
 
