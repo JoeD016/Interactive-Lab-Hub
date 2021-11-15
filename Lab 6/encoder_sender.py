@@ -38,7 +38,7 @@ while True:
         last_position = position
         val = f"Position: {position}"
         print(val)
-        cliend.public(topic, val)
+        client.public(topic, val)
 
     if not button.value and not button_held:
         button_held = True
