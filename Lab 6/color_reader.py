@@ -70,6 +70,7 @@ def on_message(cleint, userdata, msg):
     my_rgb = msg.payload.decode('UTF-8')
     res = tuple(map(int, my_rgb.split(', ')))
     draw.rectangle((0, height*0.5, width, height), fill = res)
+    disp.image(image)
 
 	# print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
 	# you can filter by topics
