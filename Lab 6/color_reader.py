@@ -67,10 +67,11 @@ def on_connect(client, userdata, flags, rc):
 
 # this is the callback that gets called each time a message is recived
 def on_message(cleint, userdata, msg):
-    # color = msg.payload.decode('UTF-8')
-    # draw.rectangle((0, height*0.5, width, height), fill = color)
+    my_rgb = msg.payload.decode('UTF-8')
+    res = tuple(map(int, my_rgb.split(', ')))
+    draw.rectangle((0, height*0.5, width, height), fill = res)
 
-	print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
+	# print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
 	# you can filter by topics
 	# if msg.topic == 'IDD/some/other/topic': do thing
 
