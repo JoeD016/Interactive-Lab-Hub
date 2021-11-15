@@ -86,6 +86,24 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+### Answer:
+
+#### Group source control updating remainder.
+: user can subscribe to different repositories or workgroups. Once someone updates the repository, they can publish the latest commit info, while others can use read to get the latest info about the repository. 
+
+#### Home automation controller
+： control the light resource and working mode of different electrical equipment（such as a cleaner or humidifiers.etc）we can use a rotator to choose our target electrical equipment, we let different types of equipment subscribe different titles, and send commands remotely. Electrical equipment will update their working status in the title too. 
+
+#### Class Schedule
+: Because of the influence of the covid virus, the class may suddenly change into remote, in this way, the professor can use matt to update the status for tomorrow’s courses. Each class has a title group, while students subscribe to all the courses that they are taking in this semester. Therefore, by simply running “read” command, they get a class schedule with updated class statuses of each course. 
+
+#### Remote Watering can:
+Similar to the home automation controller, however in this idea we use a similar concept in different fields. We assign an index for each plant pot, then you use a rotator to choose the plant you want to water. Users can send commands to water the plant with some specific requirement (such as the amount of water they want to add into the pot).
+
+#### Car Pool Signal Light
+Cooperate with Taxi apps such as Uber or lyft, and assign the same signal light to all users that in the same car pool group, then the taxi drive can distinguish them and pick up all of them at one time 
+
+
 ### Part C
 ### Streaming a Sensor
 
