@@ -124,8 +124,18 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
  ```
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
+<img width="1021" alt="Screen Shot 2021-11-14 at 8 42 11 PM" src="https://user-images.githubusercontent.com/61925885/141709629-c51a794e-e114-4553-b394-d5c46891c06e.png">
+
+#### We set up the device as we did in LAB 4, we also tried to set it out for our idea of electrical drum set in LAB 4. With the help of the central server, user can play drum remotely to deliver a performance. We see on MQTT Explorer that under topics IDD/your/topic/here which alligator clips are been touched. 
+
+
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+<img width="1023" alt="Screen Shot 2021-11-14 at 8 45 06 PM" src="https://user-images.githubusercontent.com/61925885/141709647-6bb6be3f-d6da-4da0-8151-3f6a0051cccf.png">
+
+#### We figured out the data streaming for the rotary encoder. Similar to the twizzlers senser, if the user rotate the encoder. In MQTT Explorer will display the postision of the torary encoder. We think this is a good idea to do remote control over home AC.
+
+
 
 
 ### Part D
