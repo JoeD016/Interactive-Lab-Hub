@@ -193,7 +193,7 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
-https://user-images.githubusercontent.com/61925885/137825951-b5db275f-7a15-455b-b758-673ee88c22a8.png
+![drum_1](https://user-images.githubusercontent.com/61925885/137825951-b5db275f-7a15-455b-b758-673ee88c22a8.png)
 
 #### The interface is the same as what we did in Lab 4, the physical prototype mimic what a real drum set would look like and should be intuitive to use by any drummer. 
 
