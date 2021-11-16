@@ -189,6 +189,8 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
+#### The input is from the drummer who is performing as home or other remote place. The drummer is using an electrical drum which is what we designed in Lab 4. The output is a speaker at a live event where the drummer supposed to perform for. The drummer hitting the electrical drum and send real time index of the the drum he hits by 
+
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
