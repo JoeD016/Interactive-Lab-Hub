@@ -21,6 +21,20 @@ import adafruit_rgb_display.st7789 as st7789
 
 
 import os
+import paho.mqtt.client as mqtt
+import uuid
+
+import board
+import busio
+import adafruit_apds9960.apds9960
+import time
+import paho.mqtt.client as mqtt
+import uuid
+import signal
+
+import digitalio
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_rgb_display.st7789 as st7789
 
 # For use with the STEMMA connector on QT Py RP2040
 # import busio
