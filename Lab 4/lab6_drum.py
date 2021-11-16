@@ -149,7 +149,7 @@ draw.rectangle((0, 0, width, height), outline=0, fill=0)
     # if button.value and button_held:
     #     button_held = False
     #     print("Button released")
-position = 3
+position = 1
 
 topic = 'IDD/JOJO/drum'
 
