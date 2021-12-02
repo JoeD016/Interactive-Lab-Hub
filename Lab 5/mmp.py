@@ -76,7 +76,7 @@ while True:
         if length < 10:
             #mouse.click('left')
             #mouse.click('left')
-            pyautogui.moveTo(((screenWidth-thumbX), thumbY)
+            pyautogui.moveTo((screenWidth-thumbX), thumbY)
             #mouse.click('left')
             pyautogui.click()  
             pyautogui.click()  
