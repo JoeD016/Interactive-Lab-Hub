@@ -10,8 +10,14 @@ from ctypes import cast, POINTER
 import alsaaudio
 import pyautogui
 
+
+
+
+
+
 class GameManager:
     def __init__(self):
+
         self.SCREEN_WIDTH = 800
         self.SCREEN_HEIGHT = 600
         self.FPS = 60
@@ -90,24 +96,6 @@ class GameManager:
     def update(self):
 
         # Define constants
-        m = alsaaudio.Mixer()
-        ################################
-        wCam, hCam = 640, 480
-        ################################
-        screenWidth, screenHeight = pyautogui.size()
-        currentMouseX, currentMouseY = pyautogui.position()
-        cap = cv2.VideoCapture(0)
-        cap.set(3, wCam)
-        cap.set(4, hCam)
-        pTime = 0
-         
-        detector = htm.handDetector(detectionCon=0.7)
-        minVol = 0
-        maxVol = 100
-        vol = 0
-        volBar = 400
-        volPer = 0
-        
         # Update the player's score
         current_score_string = "SCORE: " + str(self.score)
         score_text = self.font_obj.render(current_score_string, True, (255, 255, 255))
@@ -130,82 +118,6 @@ class GameManager:
         level_text_pos.centery = self.FONT_TOP_MARGIN
         self.screen.blit(level_text, level_text_pos)
 
-        success, img = cap.read()
-        img = detector.findHands(img)
-        lmList = detector.findPosition(img, draw=False)
-        #img= np.zeros((screenWidth,screenHeight,3), np.uint8)
-        if len(lmList) != 0:
- 
-            thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
-            pointerX, pointerY = lmList[8][1], lmList[8][2] #pointer
-
-            middleX, middleY = lmList[12][1], lmList[12][2]
-            ringX, ringY = lmList[16][1], lmList[16][2]
-            pinkyX, pinkyY = lmList[20][1], lmList[20][2]
-            
-            cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
- 
-        # cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.circle(img, (ringX, ringY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
-        # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
-        # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
-        
-
-        #index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
-        #index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
-        
-        #cv2.circle(img, (600-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
-        #pyautogui.moveTo(600-index_x, index_y)
-            pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
-
-        
-            len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
-            length = len_calc(thumbX,thumbY,pointerX,pointerY)
-        #length1 = len_calc(pointerX,pointerY,middleX,middleY)
-        #length2 = len_calc(middleX, middleY, ringX, ringY)
-        #length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
-        #length4 = len_calc(thumbX,thumbY, ringX, ringY)
-        #print(length1,length2,length3)
-            condition = length>100 
-        #and length1>100 
-        #and length2<100 and length3>100 and length4<100
-            if condition:
-                m.setvolume(0)
-                volPer = 0
-                volBar = 400
-                print("CONDITION")
-                cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 3)
-            else:
- 
-                vol = np.interp(length, [50, 300], [minVol, maxVol])
-                volBar = np.interp(length, [50, 300], [400, 150])
-                volPer = np.interp(length, [50, 300], [0, 100])
-                m.setvolume(int(vol))
-
-        #print(int(length), vol)
-
- 
-            if length < 10:
-                pyautogui.click()  
-#               cv2.circle(img, (((600-cx)/600) * screenWidth, cy), 15, (0, 255, 0), cv2.FILLED)
- 
-    # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
-    # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
-    # cv2.putText(img, f'{int(volPer)} %', (40, 450), cv2.FONT_HERSHEY_COMPLEX,
-    #             1, (255, 0, 0), 3)
- 
- 
-        cTime = time.time()
-        fps = 1 / (cTime - pTime)
-        pTime = cTime
-        cv2.putText(img, f'FPS: {int(fps)}', (40, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 3)
- 
-        #cv2.imshow("Img", img)
-        cv2.waitKey(1)
-
 
 
 
@@ -227,7 +139,24 @@ class GameManager:
         for i in range(len(self.mole)):
             self.mole[i].set_colorkey((0, 0, 0))
             self.mole[i] = self.mole[i].convert_alpha()
-
+        m = alsaaudio.Mixer()
+        ################################
+        wCam, hCam = 640, 480
+        ################################
+        
+        screenWidth, screenHeight = pyautogui.size()
+        currentMouseX, currentMouseY = pyautogui.position()
+        cap = cv2.VideoCapture(0)
+        cap.set(3, wCam)
+        cap.set(4, hCam)
+        pTime = 0
+         
+        detector = htm.handDetector(detectionCon=0.7)
+        minVol = 0
+        maxVol = 100
+        vol = 0
+        volBar = 400
+        volPer = 0
         while loop:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -288,6 +217,43 @@ class GameManager:
                 cycle_time = 0
             # Update the display
             pygame.display.flip()
+
+            success, img = cap.read()
+            img = detector.findHands(img)
+            lmList = detector.findPosition(img, draw=False)
+            #img= np.zeros((screenWidth,screenHeight,3), np.uint8)
+            if len(lmList) != 0:
+     
+                thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
+                pointerX, pointerY = lmList[8][1], lmList[8][2] #pointer
+
+                middleX, middleY = lmList[12][1], lmList[12][2]
+                ringX, ringY = lmList[16][1], lmList[16][2]
+                pinkyX, pinkyY = lmList[20][1], lmList[20][2]
+                
+                cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
+                pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
+
+            
+                len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
+                length = len_calc(thumbX,thumbY,pointerX,pointerY)
+                condition = length>100 
+                if condition:
+                    m.setvolume(0)
+                    volPer = 0
+                    volBar = 400
+                    print("CONDITION")
+                    cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 3)
+                else:
+     
+                    vol = np.interp(length, [50, 300], [minVol, maxVol])
+                    volBar = np.interp(length, [50, 300], [400, 150])
+                    volPer = np.interp(length, [50, 300], [0, 100])
+                    m.setvolume(int(vol))
+
+            #print(int(length), vol)
+                if length < 10:
+                    pyautogui.click()  
 
 
 # The Debugger class - use this class for printing out debugging information
