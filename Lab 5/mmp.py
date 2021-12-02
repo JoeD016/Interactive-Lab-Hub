@@ -9,7 +9,7 @@ import pyautogui
 #import mouse
 m = alsaaudio.Mixer()
 ################################
-wCam, hCam = 640, 480
+
 ################################
  
 cap = cv2.VideoCapture(0)
@@ -17,6 +17,7 @@ cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
 screenWidth, screenHeight = pyautogui.size()
+wCam, hCam = screenWidth, screenHeight
 detector = htm.handDetector(detectionCon=0.7)
 minVol = 0
 maxVol = 100
@@ -53,13 +54,13 @@ while True:
         length2 = len_calc(middleX, middleY, ringX, ringY)
         length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
         length4 = len_calc(thumbX,thumbY, ringX, ringY)
-        print(length1,length2,length3)
+        #print(length1,length2,length3)
         condition = length>100 and length1>100 and length2<100 and length3>100 and length4<100
         if condition:
             m.setvolume(0)
             volPer = 0
             volBar = 400
-            print("CONDITION")
+            #print("CONDITION")
             cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX,
                 1, (255, 255, 255), 3)
         else:
@@ -69,13 +70,13 @@ while True:
             volPer = np.interp(length, [50, 300], [0, 100])
             m.setvolume(int(vol))
 
-        print(int(length), vol)
+        #print(int(length), vol)
 
  
         if length < 10:
             #mouse.click('left')
             #mouse.click('left')
-            pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
+            pyautogui.moveTo(((screenWidth-thumbX), thumbY)
             #mouse.click('left')
             pyautogui.click()  
             pyautogui.click()  
