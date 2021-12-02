@@ -24,10 +24,10 @@ vol = 0
 volBar = 400
 volPer = 0
 while True:
-    success, img2 = cap.read()
-    img2 = detector.findHands(img2)
-    lmList = detector.findPosition(img2, draw=False)
-    img= np.zeros((screenWidth,screenHeight,3), np.uint8)
+    success, img = cap.read()
+    img = detector.findHands(img)
+    lmList = detector.findPosition(img, draw=False)
+    #img= np.zeros((screenWidth,screenHeight,3), np.uint8)
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
@@ -51,9 +51,9 @@ while True:
         #index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         #index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         
-        #cv2.circle(img, (screenWidth-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
-        #pyautogui.moveTo(screenWidth-index_x, index_y)
-        pyautogui.moveTo(screenWidth-thumbX, thumbY)
+        #cv2.circle(img, (600-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
+        #pyautogui.moveTo(600-index_x, index_y)
+        pyautogui.moveTo(600-thumbX, thumbY)
 
         
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
@@ -84,7 +84,7 @@ while True:
 
  
         if length < 10:
-            cv2.circle(img, (screenWidth-cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (600-cx, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
