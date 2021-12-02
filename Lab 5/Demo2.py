@@ -25,7 +25,7 @@ while True:
     success, img2 = cap.read()
     img2 = detector.findHands(img2)
     lmList = detector.findPosition(img2, draw=False)
-    img= np.zeros((600,450,3), np.uint8)
+    img= np.zeros((1000,1000,3), np.uint8)
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
