@@ -48,10 +48,12 @@ while True:
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
         
 
-        index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
-        index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
+        #index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
+        #index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
+        
         #cv2.circle(img, (screenWidth-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
-        pyautogui.moveTo(screenWidth-index_x, index_y)
+        #pyautogui.moveTo(screenWidth-index_x, index_y)
+        pyautogui.moveTo(screenWidth-thumbX, thumbY)
 
         
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
