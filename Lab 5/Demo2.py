@@ -83,7 +83,8 @@ while True:
         print(int(length), vol)
 
  
-#         if length < 10:
+        if length < 10:
+            pyautogui.click()  
 #             cv2.circle(img, (((600-cx)/600) * screenWidth, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
