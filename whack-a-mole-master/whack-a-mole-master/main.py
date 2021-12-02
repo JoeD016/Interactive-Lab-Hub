@@ -10,28 +10,28 @@ from ctypes import cast, POINTER
 import alsaaudio
 import pyautogui
 
-m = alsaaudio.Mixer()
-################################
-wCam, hCam = 640, 480
-################################
-screenWidth, screenHeight = pyautogui.size()
-currentMouseX, currentMouseY = pyautogui.position()
-cap = cv2.VideoCapture(0)
-cap.set(3, wCam)
-cap.set(4, hCam)
-pTime = 0
-
-detector = htm.handDetector(detectionCon=0.7)
-minVol = 0
-maxVol = 100
-vol = 0
-volBar = 400
-volPer = 0
-
-
 class GameManager:
     def __init__(self):
         # Define constants
+        self.m = alsaaudio.Mixer()
+        ################################
+        self.wCam=640
+        self.hCam=480
+        ################################
+        self.screenWidth, self.screenHeight = pyautogui.size()
+        self.currentMouseX, self.currentMouseY = pyautogui.position()
+        self.cap = cv2.VideoCapture(0)
+        self.cap.set(3, wCam)
+        self.cap.set(4, hCam)
+        self.pTime = 0
+
+        self.detector = htm.handDetector(detectionCon=0.7)
+        self.minVol = 0
+        self.maxVol = 100
+        self.vol = 0
+        self.volBar = 400
+        self.volPer = 0
+
         self.SCREEN_WIDTH = 800
         self.SCREEN_HEIGHT = 600
         self.FPS = 60
