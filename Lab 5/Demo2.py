@@ -25,9 +25,9 @@ volBar = 400
 volPer = 0
 while True:
     success, img = cap.read()
-    img = detector.findHands(img)
-    lmList = detector.findPosition(img, draw=False)
-    #img= np.zeros((screenWidth,screenHeight,3), np.uint8)
+    img2 = detector.findHands(img2)
+    lmList = detector.findPosition(img2, draw=False)
+    img= np.zeros((screenWidth,screenHeight,3), np.uint8)
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
