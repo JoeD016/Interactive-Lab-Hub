@@ -22,7 +22,7 @@ vol = 0
 volBar = 400
 volPer = 0
 while True:
-    #success, img2 = cap.read()
+    success, img2 = cap.read()
     img2 = detector.findHands(img2)
     lmList = detector.findPosition(img2, draw=False)
     img= np.zeros((600,450,3), np.uint8)
