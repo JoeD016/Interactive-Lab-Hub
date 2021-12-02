@@ -6,6 +6,7 @@ import math
 from ctypes import cast, POINTER
 import alsaaudio
 import pyautogui
+import mouse
 m = alsaaudio.Mixer()
 ################################
 wCam, hCam = 640, 480
@@ -44,7 +45,8 @@ while True:
         cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
         cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
-        pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
+#         pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
+        mouse.move(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight, absolute=False, duration=0.01)
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
         length = len_calc(thumbX,thumbY,pointerX,pointerY)
         length1 = len_calc(pointerX,pointerY,middleX,middleY)
@@ -71,7 +73,9 @@ while True:
 
  
         if length < 50:
-            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            mouse.click('left')
+            mouse.click('left')
+#             cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
  
     cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
