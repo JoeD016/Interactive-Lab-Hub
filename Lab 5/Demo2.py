@@ -50,18 +50,20 @@ while True:
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
-        cv2.circle(img, (screenWidth-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
+        #cv2.circle(img, (screenWidth-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         pyautogui.moveTo(screenWidth-index_x, index_y)
 
         
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
         length = len_calc(thumbX,thumbY,pointerX,pointerY)
-        length1 = len_calc(pointerX,pointerY,middleX,middleY)
-        length2 = len_calc(middleX, middleY, ringX, ringY)
-        length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
-        length4 = len_calc(thumbX,thumbY, ringX, ringY)
-        print(length1,length2,length3)
-        condition = length>100 and length1>100 and length2<100 and length3>100 and length4<100
+        #length1 = len_calc(pointerX,pointerY,middleX,middleY)
+        #length2 = len_calc(middleX, middleY, ringX, ringY)
+        #length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
+        #length4 = len_calc(thumbX,thumbY, ringX, ringY)
+        #print(length1,length2,length3)
+        condition = length>100 
+        #and length1>100 
+        #and length2<100 and length3>100 and length4<100
         if condition:
             m.setvolume(0)
             volPer = 0
@@ -79,7 +81,7 @@ while True:
         print(int(length), vol)
 
  
-        if length < 50:
+        if length < 10:
             cv2.circle(img, (screenWidth-cx, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
