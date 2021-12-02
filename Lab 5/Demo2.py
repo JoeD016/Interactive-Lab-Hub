@@ -53,7 +53,7 @@ while True:
         
         #cv2.circle(img, (600-index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
         #pyautogui.moveTo(600-index_x, index_y)
-        pyautogui.moveTo(600-thumbX, thumbY)
+        pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
 
         
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
@@ -83,8 +83,8 @@ while True:
         print(int(length), vol)
 
  
-        if length < 10:
-            cv2.circle(img, (600-cx, cy), 15, (0, 255, 0), cv2.FILLED)
+#         if length < 10:
+#             cv2.circle(img, (((600-cx)/600) * screenWidth, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
