@@ -22,7 +22,7 @@ vol = 0
 volBar = 400
 volPer = 0
 while True:
-    success, img = cap.read()
+    #success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
     if len(lmList) != 0:
@@ -77,7 +77,7 @@ while True:
 
  
         if length < 50:
-            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (600-cx, cy), 15, (0, 255, 0), cv2.FILLED)
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
