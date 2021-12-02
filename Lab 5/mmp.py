@@ -9,15 +9,16 @@ import pyautogui
 #import mouse
 m = alsaaudio.Mixer()
 ################################
-
+screenWidth, screenHeight = pyautogui.size()
+wCam, hCam = screenWidth, screenHeight
 ################################
  
 cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
-screenWidth, screenHeight = pyautogui.size()
-wCam, hCam = screenWidth, screenHeight
+
+
 detector = htm.handDetector(detectionCon=0.7)
 minVol = 0
 maxVol = 100
