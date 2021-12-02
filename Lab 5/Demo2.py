@@ -22,9 +22,10 @@ vol = 0
 volBar = 400
 volPer = 0
 while True:
-    #success, img = cap.read()
-    img = detector.findHands(img)
-    lmList = detector.findPosition(img, draw=False)
+    #success, img2 = cap.read()
+    img2 = detector.findHands(img2)
+    lmList = detector.findPosition(img2, draw=False)
+    img= np.zeros((600,450,3), np.uint8)
     if len(lmList) != 0:
  
         thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
@@ -43,7 +44,7 @@ while True:
         # cv2.circle(img, (pinkyX, pinkyY), 15, (255, 0, 255), cv2.FILLED)
         # cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
-
+        
 
         index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
         index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
