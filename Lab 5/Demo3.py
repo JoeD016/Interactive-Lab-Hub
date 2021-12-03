@@ -84,6 +84,10 @@ while True:
         cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
 
     if state == 1:
+
+        for hole in hole_list:
+            cv2.circle(img, (hole[0],hole[1]), 75, (255, 200, 200), cv2.FILLED)
+
         now = datetime.datetime.now()
         if now>endtime:
             state = 2
@@ -182,13 +186,15 @@ while True:
  
         if length < 10:
 
+
             if state == 0:
             #if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
                 state=1
                 endtime=datetime.datetime.now()+gamelength
 
 
-            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (screenWidth-index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
+            #cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
                 if contact(screenWidth-index_x,int(index_y),x,y,25,50):
