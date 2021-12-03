@@ -239,7 +239,7 @@ class GameManager:
                 height = 20
                # pygame.draw.rect(self.screen, (255, 0, 0), ((screenWidth-thumbX), (thumbY), width, height))
                 pyautogui.moveTo((screenWidth-thumbX), (thumbY))
-#                 len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
+                len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
                 length = len_calc(thumbX,thumbY,pointerX,pointerY)
 #                 condition = length>100 
 #                 if condition:
