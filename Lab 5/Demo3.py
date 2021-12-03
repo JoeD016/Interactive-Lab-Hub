@@ -66,6 +66,7 @@ circles.append([hole_list[2][0],hole_list[2][1],0,2])
 while True:
     print(state)
     success, img = cap.read()
+    img= cv2.flip(img, 1)
     img = detector.findHands(img)
     #img= cv2.flip(img,1)
     lmList = detector.findPosition(img, draw=False)
@@ -154,7 +155,7 @@ while True:
         #index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
         index_x=thumbX
         index_y=thumbY
-        cv2.circle(img, (screenWidth-index_x, index_y), 25, (255, 0, 255), cv2.FILLED)
+        cv2.circle(img, (index_x, index_y), 25, (255, 0, 255), cv2.FILLED)
         
         
 
@@ -199,10 +200,10 @@ while True:
             if state == 2:
                 exit()
 
-            cv2.circle(img, (screenWidth-index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
-                if contact(screenWidth-index_x,int(index_y),x,y,25,50):
+                if contact(index_x,int(index_y),x,y,25,50):
                     if circle[2] != 1:
                         score += 1
                     circle[2] = 1
