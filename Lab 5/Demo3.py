@@ -184,7 +184,7 @@ while True:
         print(int(length), vol)
 
  
-        if length < 10:
+        if length < 50:
 
 
             if state == 0:
