@@ -64,7 +64,7 @@ circles.append([hole_list[2][0],hole_list[2][1],0,2])
 
 
 while True:
-    
+    print(state)
     success, img = cap.read()
     img = detector.findHands(img)
     #img= cv2.flip(img,1)
