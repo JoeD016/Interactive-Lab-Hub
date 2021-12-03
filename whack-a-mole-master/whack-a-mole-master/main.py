@@ -237,7 +237,7 @@ class GameManager:
                 
                 width = 20
                 height = 20
-                pygame.draw.rect(self.screen, (255, 0, 0), ((screenWith-thumbX), (thumbY), width, height))
+                pygame.draw.rect(self.screen, (255, 0, 0), ((screenWidth-thumbX), (thumbY), width, height))
             
                 len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
                 length = len_calc(thumbX,thumbY,pointerX,pointerY)
@@ -256,7 +256,7 @@ class GameManager:
 
             #print(int(length), vol)
                 if length < 10:
-                    pyautogui.moveTo((screenWith-thumbX), (thumbY))
+                    pyautogui.moveTo((screenWidth-thumbX), (thumbY))
                     pyautogui.click()
                     pyautogui.click() 
 
