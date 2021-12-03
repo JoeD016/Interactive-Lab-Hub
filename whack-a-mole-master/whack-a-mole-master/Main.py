@@ -28,14 +28,24 @@ class GameManager:
         self.font_obj = pygame.font.Font('./fonts/GROBOLD.ttf', self.FONT_SIZE)
         # Initialize the mole's sprite sheet
         # 6 different states
-        sprite_sheet = pygame.image.load("images/mole.png")
+        # moles = []
+        
+
+        # moles.append(pygame.image.load("moles/title000.png"))
+        # moles.append(pygame.image.load("moles/title001.png"))
+        # moles.append(pygame.image.load("moles/title002.png"))
+        # moles.append(pygame.image.load("moles/title003.png"))
+        # moles.append(pygame.image.load("moles/title004.png"))
+        # moles.append(pygame.image.load("moles/title005.png"))
+        
+        # sprite_sheet = pygame.image.load("images/mole.png")
         self.mole = []
-        self.mole.append(sprite_sheet.subsurface(169, 0, 90, 81))
-        self.mole.append(sprite_sheet.subsurface(309, 0, 90, 81))
-        self.mole.append(sprite_sheet.subsurface(449, 0, 90, 81))
-        self.mole.append(sprite_sheet.subsurface(575, 0, 116, 81))
-        self.mole.append(sprite_sheet.subsurface(717, 0, 116, 81))
-        self.mole.append(sprite_sheet.subsurface(853, 0, 116, 81))
+        self.mole.append(pygame.image.load("moles/tile000.png"))
+        self.mole.append(pygame.image.load("moles/tile001.png"))
+        self.mole.append(pygame.image.load("moles/tile002.png"))
+        self.mole.append(pygame.image.load("moles/tile003.png"))
+        self.mole.append(pygame.image.load("moles/tile004.png"))
+        self.mole.append(pygame.image.load("moles/tile005.png"))
         # Positions of the holes in background
         self.hole_positions = []
         self.hole_positions.append((381, 295))
