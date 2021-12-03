@@ -48,15 +48,15 @@ class GameManager:
         self.mole.append(pygame.image.load("moles/tile005.png"))
         # Positions of the holes in background
         self.hole_positions = []
-        self.hole_positions.append((381 - 20,295 - 20))
-        self.hole_positions.append((119- 20, 366 - 20))
-        self.hole_positions.append((179- 20, 169 - 20))
-        self.hole_positions.append((404- 20, 479 - 20))
-        self.hole_positions.append((636- 20, 366 - 20))
-        self.hole_positions.append((658- 20, 232 - 20))
-        self.hole_positions.append((464- 20, 119 - 20))
-        self.hole_positions.append((95- 20, 43 - 20))
-        self.hole_positions.append((603- 20, 11 - 20))
+        self.hole_positions.append((381 - 20,295 - 30))
+        self.hole_positions.append((119- 20, 366 - 30))
+        self.hole_positions.append((179- 20, 169 - 30))
+        self.hole_positions.append((404- 20, 479 - 30))
+        self.hole_positions.append((636- 20, 366 - 30))
+        self.hole_positions.append((658- 20, 232 - 30))
+        self.hole_positions.append((464- 20, 119 - 30))
+        self.hole_positions.append((95- 20, 43 - 30))
+        self.hole_positions.append((603- 20, 11 - 30))
         # Init debugger
         self.debugger = Debugger("debug")
         # Sound effects
