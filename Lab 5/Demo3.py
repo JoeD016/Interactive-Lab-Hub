@@ -101,7 +101,7 @@ while True:
             #random_x = random.randint(1,600)
             #random_y = random.randint(1,450)
             random_pos = random.randint(0,9)
-            int count=0
+            count=0
             while(hole_Filled[random_pos] and count<8)
                 random_pos = random.randint(0,9)
                 count=count+1
