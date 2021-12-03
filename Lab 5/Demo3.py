@@ -100,12 +100,12 @@ while True:
             print("generate next circle")
             #random_x = random.randint(1,600)
             #random_y = random.randint(1,450)
-            random_pos = random.randint(0,9)
-            count=0
-            while(hole_Filled[random_pos] and count<8)
+            if circles.size<9:
                 random_pos = random.randint(0,9)
-                count=count+1
-            if count<8     
+
+                while hole_Filled[random_pos]: 
+                    random_pos = random.randint(0,9)
+
                 circles.append([hole_list[random_pos][0], hole_list[random_pos][1],0, random_pos])
                 hole_Filled[random_pos]= True
 
@@ -187,11 +187,11 @@ while True:
             cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
-                if contact(index_x,index_y,x,y,50,50):
+                if contact(index_x,index_y,x,y,25,50):
                     if circle[2] != 1:
                         score += 1
                     circle[2] = 1
-                    circle[3] = False
+                    hole_Filled[circle[3]]=False
 
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
