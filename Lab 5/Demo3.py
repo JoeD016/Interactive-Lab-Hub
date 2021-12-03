@@ -91,9 +91,9 @@ while True:
 
         nowdelete= datetime.datetime.now()
         for circle in circles:
-            print(circle)
+            #print(circle)
             if circle[2] is not 1:
-                cv2.circle(img, (circle[0],circle[1]), 50, (255, 255, 0), cv2.FILLED)
+                cv2.circle(img, (int(circle[0]),int(circle[1])), 50, (255, 255, 0), cv2.FILLED)
         print(len(circles))
 
         if now.time()>nextime.time():
