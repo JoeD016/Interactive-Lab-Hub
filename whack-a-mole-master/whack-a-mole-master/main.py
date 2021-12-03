@@ -229,34 +229,34 @@ class GameManager:
                 thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
                 pointerX, pointerY = lmList[8][1], lmList[8][2] #pointer
 
-                middleX, middleY = lmList[12][1], lmList[12][2]
-                ringX, ringY = lmList[16][1], lmList[16][2]
-                pinkyX, pinkyY = lmList[20][1], lmList[20][2]
+#                 middleX, middleY = lmList[12][1], lmList[12][2]
+#                 ringX, ringY = lmList[16][1], lmList[16][2]
+#                 pinkyX, pinkyY = lmList[20][1], lmList[20][2]
                 
                 cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
                 
                 width = 20
                 height = 20
-                pygame.draw.rect(self.screen, (255, 0, 0), ((screenWidth-thumbX), (thumbY), width, height))
-            
-                len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
+               # pygame.draw.rect(self.screen, (255, 0, 0), ((screenWidth-thumbX), (thumbY), width, height))
+                pyautogui.moveTo((screenWidth-thumbX), (thumbY))
+#                 len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
                 length = len_calc(thumbX,thumbY,pointerX,pointerY)
-                condition = length>100 
-                if condition:
-                    m.setvolume(0)
-                    volPer = 0
-                    volBar = 400
-                    print("CONDITION")
-                    cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 3)
-                else:
-                    vol = np.interp(length, [50, 300], [minVol, maxVol])
-                    volBar = np.interp(length, [50, 300], [400, 150])
-                    volPer = np.interp(length, [50, 300], [0, 100])
-                    m.setvolume(int(vol))
+#                 condition = length>100 
+#                 if condition:
+#                     m.setvolume(0)
+#                     volPer = 0
+#                     volBar = 400
+#                     print("CONDITION")
+#                     cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 3)
+#                 else:
+#                     vol = np.interp(length, [50, 300], [minVol, maxVol])
+#                     volBar = np.interp(length, [50, 300], [400, 150])
+#                     volPer = np.interp(length, [50, 300], [0, 100])
+#                     m.setvolume(int(vol))
 
             #print(int(length), vol)
                 if length < 10:
-                    pyautogui.moveTo((screenWidth-thumbX), (thumbY))
+                  
                     pyautogui.click()
                     pyautogui.click() 
 
