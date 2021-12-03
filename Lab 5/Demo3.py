@@ -98,6 +98,11 @@ while True:
             #print(circle)
             if circle[2] is not 1:
                 cv2.circle(img, (int(circle[0]),int(circle[1])), 50, (255, 255, 0), cv2.FILLED)
+                cv2.circle(img. (int(circle[0]-20),int(circle[1])+10), 10, (255,255,255),cv2.FILLED)
+                cv2.circle(img. (int(circle[0]+20),int(circle[1])+10), 10, (255,255,255),cv2.FILLED)
+                cv2.rectangle(img, (int(circle[0]-7),int(circle[1]-7)), (int(circle[0]+7),int(circle[1]+7)), (255, 0, 0), 3)
+                cv2.rectangle(img, (int(circle[0]-25),int(circle[1]-15)), (int(circle[0]-20),int(circle[1]+15)), (255, 255, 255), 3)
+
         print(len(circles))
 
         if now.time()>nextime.time():
@@ -184,8 +189,7 @@ while True:
         print(int(length), vol)
 
  
-        if length < 50:
-
+        if length < 10:
 
             if state == 0:
             #if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
@@ -193,8 +197,7 @@ while True:
                 endtime=datetime.datetime.now()+gamelength
 
 
-            cv2.circle(img, (screenWidth-index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
-            #cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
                 if contact(screenWidth-index_x,int(index_y),x,y,25,50):
