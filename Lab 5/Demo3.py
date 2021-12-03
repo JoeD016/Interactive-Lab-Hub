@@ -100,7 +100,7 @@ while True:
             print("generate next circle")
             #random_x = random.randint(1,600)
             #random_y = random.randint(1,450)
-            if circles.size<9:
+            if len(circles)<9:
                 random_pos = random.randint(0,9)
 
                 while hole_Filled[random_pos]: 
@@ -146,10 +146,7 @@ while True:
         index_y=thumbY
         cv2.circle(img, (screenWidth-index_x, index_y), 25, (255, 0, 255), cv2.FILLED)
         
-        if state == 0:
-            if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
-                state=1
-                endtime=datetime.datetime.now()+gamelength
+        
 
         
      
@@ -184,6 +181,13 @@ while True:
 
  
         if length < 10:
+
+            if state == 0:
+            #if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
+                state=1
+                endtime=datetime.datetime.now()+gamelength
+
+
             cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
