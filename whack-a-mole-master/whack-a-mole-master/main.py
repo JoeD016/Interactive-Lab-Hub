@@ -17,9 +17,10 @@ import pyautogui
 
 class GameManager:
     def __init__(self):
-
-        self.SCREEN_WIDTH = 800
-        self.SCREEN_HEIGHT = 600
+        screenWidth, screenHeight = pyautogui.size()
+        #wCam, hCam = screenWidth, screenHeight
+        self.SCREEN_WIDTH = screenWidth
+        self.SCREEN_HEIGHT = screenHeight
         self.FPS = 60
         self.MOLE_WIDTH = 90
         self.MOLE_HEIGHT = 81
@@ -233,8 +234,10 @@ class GameManager:
                 pinkyX, pinkyY = lmList[20][1], lmList[20][2]
                 
                 cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
-                pyautogui.moveTo(((600-thumbX)/600) * screenWidth, (thumbY/450) * screenHeight)
-
+                
+                width = 20
+                height = 20
+                pygame.draw.rect(self.screen, (255, 0, 0), ((screenWith-thumbX), (thumbY), width, height))
             
                 len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
                 length = len_calc(thumbX,thumbY,pointerX,pointerY)
@@ -246,7 +249,6 @@ class GameManager:
                     print("CONDITION")
                     cv2.putText(img, 'quiet coyote!', (40, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 3)
                 else:
-     
                     vol = np.interp(length, [50, 300], [minVol, maxVol])
                     volBar = np.interp(length, [50, 300], [400, 150])
                     volPer = np.interp(length, [50, 300], [0, 100])
@@ -254,7 +256,9 @@ class GameManager:
 
             #print(int(length), vol)
                 if length < 10:
-                    pyautogui.click()  
+                    pyautogui.moveTo((screenWith-thumbX), (thumbY))
+                    pyautogui.click()
+                    pyautogui.click() 
 
 
 # The Debugger class - use this class for printing out debugging information
