@@ -141,7 +141,8 @@ class GameManager:
             self.mole[i] = self.mole[i].convert_alpha()
         m = alsaaudio.Mixer()
         ################################
-        wCam, hCam = 640, 480
+        screenWidth, screenHeight = pyautogui.size()
+        wCam, hCam = screenWidth, screenHeight
         ################################
         
         screenWidth, screenHeight = pyautogui.size()
