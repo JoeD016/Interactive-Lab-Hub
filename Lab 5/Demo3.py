@@ -197,7 +197,7 @@ while True:
                 endtime=datetime.datetime.now()+gamelength
 
 
-            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+            cv2.circle(img, (screenWidth-index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
                 if contact(screenWidth-index_x,int(index_y),x,y,25,50):
