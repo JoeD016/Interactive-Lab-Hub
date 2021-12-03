@@ -189,7 +189,7 @@ while True:
         print(int(length), vol)
 
  
-        if length < 10:
+        if length < 50:
 
             if state == 0:
             #if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
