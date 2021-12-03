@@ -147,7 +147,7 @@ while True:
         cv2.circle(img, (screenWidth-index_x, index_y), 25, (255, 0, 255), cv2.FILLED)
         
         if state == 0:
-            if contact(index_x,index_y,250,200,50,50):
+            if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
                 state=1
                 endtime=datetime.datetime.now()+gamelength
 
@@ -187,7 +187,7 @@ while True:
             cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
             for circle in circles:
                 x, y = circle[0],circle[1]
-                if contact(index_x,index_y,x,y,25,50):
+                if contact(int(screenWidth-index_x),int(index_y),x,y,25,50):
                     if circle[2] != 1:
                         score += 1
                     circle[2] = 1
