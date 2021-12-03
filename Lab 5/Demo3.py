@@ -101,10 +101,10 @@ while True:
             #random_x = random.randint(1,600)
             #random_y = random.randint(1,450)
             if len(circles)<9:
-                random_pos = random.randint(0,9)
+                random_pos = random.randint(0,8)
 
                 while hole_Filled[random_pos]: 
-                    random_pos = random.randint(0,9)
+                    random_pos = random.randint(0,8)
 
                 circles.append([hole_list[random_pos][0], hole_list[random_pos][1],0, random_pos])
                 hole_Filled[random_pos]= True
