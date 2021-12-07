@@ -24,10 +24,10 @@ pTime = 0
 pygame.init()
 
 GameContinue= True
-cycle_icon = cv2.imread('cycle.jpg')
-hand_icon = cv2.imread('hand.jpg')
+# cycle_icon = cv2.imread('cycle.jpg')
+# hand_icon = cv2.imread('hand.jpg')
 
-MoleImg = pygame.image.load('racecar.png')
+MoleImg = pygame.image.load("moles/tile002.png")
 gameDisplay= pygame.display.set_mode((wCam,hCam));
 pygame.display.set_caption('A bit Racey')
 
