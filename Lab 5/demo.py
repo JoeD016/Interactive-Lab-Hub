@@ -136,8 +136,8 @@ while True:
             circles.popleft()
             nextdeletetime=now+timestepdelete
 
-        cv2.putText(img,'Score :  ' + str(score), (1000,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
-        cv2.putText(img,'Time :  ' + int(endtime-datetime.datetime.now()), (1000,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Score :  ' + str(score), (1100,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Time :  ' + int(endtime-datetime.datetime.now()), (1100,100), font, 1, (255,0,0), 2, cv2.LINE_AA)
 
 
     if len(lmList) != 0:
