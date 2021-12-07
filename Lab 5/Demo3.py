@@ -59,7 +59,8 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     if((distanceX*distanceX+distanceY*distanceY)<distanceR*distanceR):
         return True
     return False
-
+def contain(loc_1x,loc_1y, x1,y1,x2,y2):
+    return loc_1x>=x1&&loc_1x<=x2&&loc_1y>=y1&&loc_1y<=y2
          
 score = 0
 circles = deque()
@@ -82,12 +83,12 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if state == 0:
-        cv2.putText(img,'start Game', (650,300), font, 3, (255,255,255), 2, cv2.LINE_AA)
-        
+        #cv2.putText(img,'start Game', (400,300), font, 3, (255,255,255), 2, cv2.LINE_AA)
+        cv2.rectangle(img, 500,200, 800,400 (255, 255, 255), 3)
+
 
     if state == 2:
         cv2.putText(img,'Yourscore: '+str(score), (1000,200), font, 2, (255,255,255), 2, cv2.LINE_AA)
-
 
     if state == 1:
 
@@ -199,9 +200,9 @@ while True:
         if length < 50:
 
             if state == 0:
-            #if contact(int(screenWidth-index_x),int(index_y),250,200,50,50):
-                state=1
-                endtime=datetime.datetime.now()+gamelength
+                if contain(int(index_x),int(index_y),500,200, 800,400):
+                    state=1
+                    endtime=datetime.datetime.now()+gamelength
             if state == 2:
                 exit()
 
