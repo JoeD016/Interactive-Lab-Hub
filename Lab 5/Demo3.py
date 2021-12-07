@@ -83,13 +83,13 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if state == 0:
-        cv2.putText(img,'start Game', (450,300), font, 2, (255,255,255), 2, cv2.LINE_AA)
-        cv2.rectangle(img, (500,200), (800,400), (255, 255, 255), 3)
+        cv2.putText(img,'start Game', (500,300), font, 1.5, (255,255,0), 2, cv2.LINE_AA)
+        cv2.rectangle(img, (500,200), (800,400), (255, 255, 0), 3)
 
 
     if state == 2:
-        cv2.putText(img,'Yourscore: '+str(score), (450,500), font, 2, (255,255,255), 2, cv2.LINE_AA)
-        cv2.putText(img,'End Game', (450,300), font, 2, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'Yourscore: '+str(score), (450,500), font, 2, (255,255,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'End Game', (500,300), font, 1.5, (255,255,0), 2, cv2.LINE_AA)
         cv2.rectangle(img, (500,200), (800,400), (255, 255, 255), 3)
 
     if state == 1:
@@ -203,11 +203,15 @@ while True:
 
             if state == 0:
                 if contain(int(index_x),int(index_y),500,200, 800,400):
+                    cv2.rectangle(img, (500,200), (800,400), (0, 255, 0), 3)
+                    cv2.waitKey(0.2)
                     state=1
                     endtime=datetime.datetime.now()+gamelength
             if state == 2:
                 
                 if contain(int(index_x),int(index_y),500,200, 800,400):
+                    cv2.rectangle(img, (500,200), (800,400), (0, 255, 0), 3)
+                    cv2.waitKey(0.2)
                     exit()
                     #Fendtime=datetime.datetime.now()+gamelength
 
