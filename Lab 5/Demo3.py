@@ -9,7 +9,7 @@ import alsaaudio
 import random
 from collections import deque 
 import pyautogui
-import pygame
+#import pygame
 
 screenWidth, screenHeight = pyautogui.size()
 m = alsaaudio.Mixer()
@@ -21,17 +21,17 @@ cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
-pygame.init()
+##pygame.init()
 
 GameContinue= True
 # cycle_icon = cv2.imread('cycle.jpg')
 # hand_icon = cv2.imread('hand.jpg')
 
-MoleImg = pygame.image.load("moles/tile002.png")
-gameDisplay= pygame.display.set_mode((wCam,hCam));
-pygame.display.set_caption('A bit Racey')
+#MoleImg = pygame.image.load("moles/tile002.png")
+#gameDisplay= pygame.display.set_mode((wCam,hCam));
+#pygame.display.set_caption('A bit Racey')
 
-hole_list = [(500,200),(750,200),(1000,200),(500,400),(750,400),(1000,400),(500,600),(750,600),(1000,600)]
+hole_list = [(500,300),(750,300),(1000,300),(500,500),(750,500),(1000,500),(500,700),(750,700),(1000,700)]
 hole_Filled =[False for i in range(9)]
 
 
@@ -103,12 +103,12 @@ while True:
         for circle in circles:
             #print(circle)
             if circle[2] is not 1:
-                # cv2.circle(img, (int(circle[0]),int(circle[1])), 50, (255, 255, 0), cv2.FILLED)
-                # cv2.circle(img, (int(circle[0]-20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
-                # cv2.circle(img, (int(circle[0]+20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
-                # cv2.rectangle(img, (int(circle[0]-7),int(circle[1]-7)), (int(circle[0]+7),int(circle[1]+7)), (255, 0, 0), 3)
-                # cv2.rectangle(img, (int(circle[0]+20),int(circle[1]+25)), (int(circle[0]-20),int(circle[1]+25)), (255, 255, 255), 3)
-                gameDisplay.blit(MoleImg, (circle[0],circle[1]))    
+                cv2.circle(img, (int(circle[0]),int(circle[1])), 50, (255, 255, 0), cv2.FILLED)
+                cv2.circle(img, (int(circle[0]-20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
+                cv2.circle(img, (int(circle[0]+20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
+                cv2.rectangle(img, (int(circle[0]-7),int(circle[1]-7)), (int(circle[0]+7),int(circle[1]+7)), (255, 0, 0), 3)
+                cv2.rectangle(img, (int(circle[0]+20),int(circle[1]+25)), (int(circle[0]-20),int(circle[1]+25)), (255, 255, 255), 3)
+                #gameDisplay.blit(MoleImg, (circle[0],circle[1]))    
 
         print(len(circles))
 
