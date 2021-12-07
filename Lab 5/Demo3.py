@@ -82,11 +82,11 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if state == 0:
-        cv2.putText(img,'start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'start Game', (650,300), font, 3, (255,255,255), 2, cv2.LINE_AA)
         
 
     if state == 2:
-        cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'Yourscore: '+str(score), (1000,200), font, 2, (255,255,255), 2, cv2.LINE_AA)
 
 
     if state == 1:
