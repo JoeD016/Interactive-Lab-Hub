@@ -60,7 +60,7 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
         return True
     return False
 def contain(loc_1x,loc_1y, x1,y1,x2,y2):
-    return loc_1x>=x1&&loc_1x<=x2&&loc_1y>=y1&&loc_1y<=y2
+    return loc_1x>=x1 and loc_1x<=x2 and loc_1y>=y1 and loc_1y<=y2
          
 score = 0
 circles = deque()
