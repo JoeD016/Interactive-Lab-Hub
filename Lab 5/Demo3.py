@@ -83,13 +83,13 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if state == 0:
-        cv2.putText(img,'start Game', (400,300), font, 3, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'start Game', (450,300), font, 2, (255,255,255), 2, cv2.LINE_AA)
         cv2.rectangle(img, (500,200), (800,400), (255, 255, 255), 3)
 
 
     if state == 2:
-        #cv2.putText(img,'Yourscore: '+str(score), (1000,200), font, 2, (255,255,255), 2, cv2.LINE_AA)
-        cv2.putText(img,'End Game', (400,300), font, 3, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'Yourscore: '+str(score), (450,500), font, 2, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'End Game', (450,300), font, 2, (255,255,255), 2, cv2.LINE_AA)
         cv2.rectangle(img, (500,200), (800,400), (255, 255, 255), 3)
 
     if state == 1:
@@ -136,7 +136,7 @@ while True:
             circles.popleft()
             nextdeletetime=now+timestepdelete
 
-        cv2.putText(img,'Score :  ' + str(score), (500,50), font, 0.5, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Score :  ' + str(score), (950,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
 
 
     if len(lmList) != 0:
