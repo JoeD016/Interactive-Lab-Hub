@@ -8,20 +8,31 @@ from ctypes import cast, POINTER
 import alsaaudio
 import random
 from collections import deque 
+import pyautogui
+#import pygame
 
+screenWidth, screenHeight = pyautogui.size()
 m = alsaaudio.Mixer()
 ################################
-wCam, hCam = 640, 480
+wCam, hCam = screenWidth, screenHeight
 ################################
  
 cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
+##pygame.init()
 
 GameContinue= True
-cycle_icon = cv2.imread('cycle.jpg')
-hand_icon = cv2.imread('hand.jpg')
+# cycle_icon = cv2.imread('cycle.jpg')
+# hand_icon = cv2.imread('hand.jpg')
+
+#MoleImg = pygame.image.load("moles/tile002.png")
+#gameDisplay= pygame.display.set_mode((wCam,hCam));
+#pygame.display.set_caption('A bit Racey')
+
+hole_list = [(400,100),(650,100),(900,100),(400,300),(650,300),(900,300),(400,500),(650,500),(900,500)]
+hole_Filled =[False for i in range(9)]
 
 
 detector = htm.handDetector(detectionCon=0.7)
@@ -48,17 +59,19 @@ def contact(loc_1x,loc_1y, loc_2x,loc_2y,radius1,radius2):
     if((distanceX*distanceX+distanceY*distanceY)<distanceR*distanceR):
         return True
     return False
-
+def contain(loc_1x,loc_1y, x1,y1,x2,y2):
+    return loc_1x>=x1 and loc_1x<=x2 and loc_1y>=y1 and loc_1y<=y2
          
 score = 0
 circles = deque()
-circles.append([300,300,0])
+circles.append([hole_list[2][0],hole_list[2][1],0,2])
 
 
 
 while True:
-    
+    print(state)
     success, img = cap.read()
+    img= cv2.flip(img, 1)
     img = detector.findHands(img)
     #img= cv2.flip(img,1)
     lmList = detector.findPosition(img, draw=False)
@@ -70,13 +83,20 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if state == 0:
-        cv2.putText(img,'start Game', (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
-        
+        cv2.putText(img,'start Game', (500,300), font, 1.5, (255,255,0), 2, cv2.LINE_AA)
+        cv2.rectangle(img, (500,200), (800,400), (255, 255, 0), 3)
+
 
     if state == 2:
-        cv2.putText(img,'Yourscore: '+str(score), (250,200), font, 1, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'Yourscore: '+str(score), (450,500), font, 2, (255,255,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'End Game', (500,300), font, 1.5, (255,255,0), 2, cv2.LINE_AA)
+        cv2.rectangle(img, (500,200), (800,400), (255, 255, 255), 3)
 
     if state == 1:
+
+        for hole in hole_list:
+            cv2.circle(img, (hole[0],hole[1]), 75, (255, 200, 200), cv2.FILLED)
+
         now = datetime.datetime.now()
         if now>endtime:
             state = 2
@@ -84,23 +104,40 @@ while True:
 
         nowdelete= datetime.datetime.now()
         for circle in circles:
-            print(circle)
+            #print(circle)
             if circle[2] is not 1:
-                cv2.circle(img, (circle[0],circle[1]), 50, (255, 255, 0), cv2.FILLED)
+                cv2.circle(img, (int(circle[0]),int(circle[1])), 50, (255, 255, 0), cv2.FILLED)
+                cv2.circle(img, (int(circle[0]-20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
+                cv2.circle(img, (int(circle[0]+20),int(circle[1])-15), 10, (255,255,255),cv2.FILLED)
+                cv2.rectangle(img, (int(circle[0]-7),int(circle[1]-7)), (int(circle[0]+7),int(circle[1]+7)), (255, 0, 0), 3)
+                cv2.rectangle(img, (int(circle[0]+20),int(circle[1]+25)), (int(circle[0]-20),int(circle[1]+25)), (255, 255, 255), 3)
+                #gameDisplay.blit(MoleImg, (circle[0],circle[1]))    
+
         print(len(circles))
 
         if now.time()>nextime.time():
             print("generate next circle")
-            random_x = random.randint(1,600)
-            random_y = random.randint(1,450)
-            circles.append([random_x,random_y,0])
+            #random_x = random.randint(1,600)
+            #random_y = random.randint(1,450)
+            if len(circles)<9:
+                random_pos = random.randint(0,8)
+
+                while hole_Filled[random_pos]: 
+                    random_pos = random.randint(0,8)
+
+                circles.append([hole_list[random_pos][0], hole_list[random_pos][1],0, random_pos])
+                hole_Filled[random_pos]= True
+
+
             nextime= now+timestep 
         if now.time()>nextdeletetime.time():
             print("delete the target")
+            hole_Filled[circles[0][3]]=False
             circles.popleft()
             nextdeletetime=now+timestepdelete
 
-        cv2.putText(img,'Score :  ' + str(score), (500,50), font, 0.5, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Score :  ' + str(score), (1000,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(img,'Time :  ' + int(endtime-datetime.datetime.now()), (1000,50), font, 1, (255,0,0), 2, cv2.LINE_AA)
 
 
     if len(lmList) != 0:
@@ -123,25 +160,19 @@ while True:
         # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
        
 
-        index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
-        index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
-        cv2.circle(img, (index_x, index_y), 50, (255, 0, 255), cv2.FILLED)
+        #index_x = (thumbX + pointerX + middleX + ringX + pinkyX + cx) // 6
+        #index_y = (thumbY + pointerY + middleY + ringY + pinkyY + cy) // 6
+        index_x=thumbX
+        index_y=thumbY
+        cv2.circle(img, (index_x, index_y), 25, (255, 0, 255), cv2.FILLED)
         
-        if state == 0:
-            if contact(index_x,index_y,250,200,50,50):
-                state=1
-                endtime=datetime.datetime.now()+gamelength
+        
 
         
-        for circle in circles:
-            x, y = circle[0],circle[1]
-            if contact(index_x,index_y,x,y,50,50):
-                if circle[2] != 1:
-                    score += 1
-                    circle[2] = 1
+     
 
 
-        print('location is' + str(index_x) + ' ' + str(index_y))
+        #print('location is' + str(index_x) + ' ' + str(index_y))
 
 
         len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
@@ -169,8 +200,31 @@ while True:
         print(int(length), vol)
 
  
-        # if length < 50:
-        #     cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+        if length < 50:
+
+            if state == 0:
+                if contain(int(index_x),int(index_y),500,200, 800,400):
+                    cv2.rectangle(img, (500,200), (800,400), (0, 255, 0), 3)
+                    cv2.waitKey(1)
+                    state=1
+                    endtime=datetime.datetime.now()+gamelength
+            if state == 2:
+                
+                if contain(int(index_x),int(index_y),500,200, 800,400):
+                    cv2.rectangle(img, (500,200), (800,400), (0, 255, 0), 3)
+                    cv2.waitKey(1)
+                    exit()
+                    #Fendtime=datetime.datetime.now()+gamelength
+
+            cv2.circle(img, (index_x, index_y), 15, (0, 255, 0), cv2.FILLED)
+            for circle in circles:
+                x, y = circle[0],circle[1]
+                if contact(index_x,int(index_y),x,y,25,50):
+                    if circle[2] != 1:
+                        score += 1
+                    circle[2] = 1
+                    hole_Filled[circle[3]]=False
+
  
     # cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
     # cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
