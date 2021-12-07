@@ -174,7 +174,7 @@ class GameManager:
             if cycle_time > interval:
                 pic = self.mole[num]
                 self.screen.blit(self.background, (0, 0))
-                self.screen.blit(pic, (self.hole_positions[frame_num][0] - left, self.hole_positions[frame_num][1]))
+                self.screen.blit(pic, (self.hole_positions[frame_num][0], self.hole_positions[frame_num][1]))
                 self.update()
                 if is_down is False:
                     num += 1
