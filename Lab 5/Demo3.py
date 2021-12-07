@@ -31,7 +31,7 @@ GameContinue= True
 #gameDisplay= pygame.display.set_mode((wCam,hCam));
 #pygame.display.set_caption('A bit Racey')
 
-hole_list = [(500,300),(750,300),(1000,300),(500,500),(750,500),(1000,500),(500,700),(750,700),(1000,700)]
+hole_list = [(400,100),(650,100),(900,100),(400,300),(650,300),(900,300),(400,500),(650,500),(900,500)]
 hole_Filled =[False for i in range(9)]
 
 
